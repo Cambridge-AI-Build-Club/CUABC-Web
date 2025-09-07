@@ -1,14 +1,14 @@
 baseurl: '/'
 permalink: pretty
-title: 'Jekyll Serif'
+title: 'Cambridge AI Builder Club'
 
 logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
+  mobile: "images/logo/cam-ai-builder-logo-mobile.png"
+  mobile_height: "auto"
   mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+  desktop: "images/logo/cam-ai-builder-logo.png"
+  desktop_height: "auto"
+  desktop_width: "130px"
 
 home: 
   limit_services: 6

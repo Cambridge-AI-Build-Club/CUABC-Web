@@ -1,22 +1,12 @@
 [
   {
     "name": "Github",
-    "link": "https://github.com/zerostaticthemes/jekyll-serif-theme",
+    "link": "https://github.com/Cambridge-AI-Build-Club",
     "image": "images/social/github.svg"
   },
   {
-    "name": "Twitter",
-    "link": "https://twitter.com/zerostaticio",
-    "image": "images/social/twitter.svg"
-  },
-  {
-      "name": "Facebook",
-      "link": "https://facebook.com",
-      "image": "images/social/facebook.svg"
-  },
-  {
       "name": "Email",
-      "link": "mailto:ekyllserif@example.com ",
+      "link": "mailto:cu.build.ai@gmail.com",
       "image": "images/social/email.svg"
   },
   {
@@ -26,7 +16,7 @@
   },
   {
       "name": "Discord",
-      "link": "https://discord.com",
+      "link": "https://discord.gg/qVBwKSEu",
       "image": "images/social/discord.svg"
   }
 

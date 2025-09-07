@@ -2,7 +2,7 @@
 ---
 
 // Colors
-$primary: #e5261f;
+$primary: #d52627;
 $primary-dark: #a01b16;
 $secondary: #f88379;
 $black: #2f2f41;
@@ -93,6 +93,8 @@ $sub-footer-text-color: $white;
 @import "components/hamburger";
 @import "components/buttons";
 @import "components/call";
+@import "components/signup";
+@import "components/discord";
 @import "components/title";
 @import "components/content";
 @import "components/intro";

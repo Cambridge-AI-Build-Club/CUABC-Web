@@ -12,19 +12,19 @@
   }
   @include media-breakpoint-up(md) {
     position: absolute;
-    bottom: -50px;
+    bottom: 138px;
     left: -50px;
-    width: 700px;
+    width: 380px;
   }
   @include media-breakpoint-up(lg) {
-    bottom: -60px;
-    left: -60px;
-    width: 800px;
+    bottom: -63px;
+    left: -12px;
+    width: 528px;
   }
   @include media-breakpoint-up(xl) {
-    bottom: -100px;
-    left: -70px;
-    width: 850px;
+    bottom: -155px;
+    left: 0px;
+    width: 610px;
   }
 }
 .intro-image-hide-mobile {
