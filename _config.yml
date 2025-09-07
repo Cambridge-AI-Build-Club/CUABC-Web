@@ -14,7 +14,10 @@ home:
   limit_services: 6
 
 collections:
-  services:
+  events:
+    output: true
+    sort_by: weight
+  blogs:
     output: true
     sort_by: weight
   team:
@@ -23,9 +26,14 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "services"
+      type: "events"
     values:
-      layout: "service"
+      layout: "event"
+  - scope:
+      path: ""
+      type: "blogs"
+    values:
+      layout: "blog"
   - scope:
       path: ""
       type: "team"

@@ -1,6 +1,6 @@
 ---
 layout: default
-bodyClass: "page-services"
+bodyClass: "page-events"
 ---
 
 <div class="intro">
@@ -20,14 +20,14 @@ bodyClass: "page-services"
 
 <div class="container pt-6 pb-6">
   <div class="row">
-    {% for service in site.services %}
+    {% for event in site.events %}
     <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
+      <div class="event event-summary">
+        <div class="event-content">
+          <h2 class="event-title">
+            <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
           </h2>
-          <p>{{ service.excerpt | markdownify | strip_html | truncate: 100 }}</p>
+          <p>{{ event.excerpt | markdownify | strip_html | truncate: 100 }}</p>
         </div>
       </div>
     </div>
