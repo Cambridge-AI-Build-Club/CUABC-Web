@@ -1,9 +1,9 @@
 ---
 title: "Andrew Choi"
 date: 2025-09-07
-image: "images/team/andrew_Choi.png"
+image: "images/team/andrew_choi.png"
 jobtitle: "President & Lead Organiser"
-linkedinurl: "https://www.linkedin.com/in/jaehyung-andrew-choi"
+linkedinurl: "https://www.linkedin.com/in/jaehyung-andrew-choi/"
 promoted: true
 weight: 1
 ---
