@@ -1,7 +1,7 @@
 ---
-title: Jekyll Serif Theme
+title: Cambridge AI Builder Club
 layout: home
-description: Jekyll Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+description: A community for Cambridge students to explore AI, build real projects, and connect through workshops, hackathons, and events with leading organisations.
 intro_image: "images/illustrations/ai-builder.png"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true

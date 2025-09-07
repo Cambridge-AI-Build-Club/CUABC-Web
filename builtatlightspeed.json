@@ -1,7 +1,7 @@
 {
     "originRepo": "https://github.com/zerostaticthemes/jekyll-serif-theme",
-    "title": "Jekyll Serif",
-    "description": "Serif is a multi page business theme for Jekyll.",
+    "title": "Cambridge AI Builder Club",
+    "description": "A community for Cambridge students to explore AI, build real projects, and connect through workshops, hackathons, and events with leading organisations.",
     "demoUrl": "https://jekyll-advance.netlify.app",
     "categories": {
       "ssg": ["jekyll"],
