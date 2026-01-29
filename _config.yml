@@ -3,12 +3,12 @@ permalink: pretty
 title: 'Cambridge AI Builder Club'
 
 logo:
-  mobile: "images/logo/cam-ai-builder-logo-mobile.svg"
+  mobile: "images/logo/cam-ai-builder-logo-mobile.png"
   mobile_height: "auto"
-  mobile_width: "36px"
-  desktop: "images/logo/cam-ai-builder-logo.svg"
+  mobile_width: "32px"
+  desktop: "images/logo/cam-ai-builder-logo.png"
   desktop_height: "auto"
-  desktop_width: "160px"
+  desktop_width: "130px"
 
 home: 
   limit_services: 6
