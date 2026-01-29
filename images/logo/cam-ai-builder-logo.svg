@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;display=swap');
+    .title { font-family: 'Playfair Display', Georgia, serif; }
+  </style>
+  <!-- Cambridge University - Navy -->
+  <text x="200" y="60" text-anchor="middle" class="title" font-size="42" font-weight="400" fill="#1e2a4a">Cambridge</text>
+  <text x="200" y="110" text-anchor="middle" class="title" font-size="42" font-weight="400" fill="#1e2a4a">University</text>
+  <!-- AI Builder Club - Claude Orange -->
+  <text x="200" y="165" text-anchor="middle" class="title" font-size="38" font-weight="700" fill="#DA7756">AI Builder Club</text>
+</svg>
