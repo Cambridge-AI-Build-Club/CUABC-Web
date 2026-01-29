@@ -1,0 +1,316 @@
+---
+layout: default
+bodyClass: "page-calendar"
+---
+
+<!-- Tailwind CSS for calendar -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    prefix: 'tw-',
+    corePlugins: {
+      preflight: false,
+    },
+    theme: {
+      extend: {
+        colors: {
+          claude: {
+            orange: '#DA7756',
+            'orange-light': '#E8A88C',
+            'orange-dark': '#C45D3A',
+            cream: '#FAF9F7',
+            'cream-dark': '#F5F4EF',
+            sand: '#E8E4DD',
+            charcoal: '#1A1915',
+            'charcoal-light': '#3D3929',
+            tan: '#D4A574',
+            coral: '#E07B5D',
+            sage: '#7D8471',
+            'sage-light': '#A8B099',
+          }
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .calendar-container { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: #F5F4EF; border-radius: 3px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: #D4A574; border-radius: 3px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #DA7756; }
+</style>
+
+<div class="calendar-container tw-bg-claude-cream tw-min-h-screen">
+  <div class="tw-p-4 md:tw-p-6">
+    <div class="tw-max-w-6xl tw-mx-auto">
+      <!-- Header -->
+      <div class="tw-text-center tw-mb-8">
+        <div class="tw-flex tw-items-center tw-justify-center tw-gap-3 tw-mb-3">
+          <!-- Claude Logo Mark -->
+          <img src="https://cdn.brandfetch.io/idW5s392j1/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809101" alt="Claude Logo" style="height: 32px; width: auto;">
+          <div>
+            <h1 class="tw-text-2xl md:tw-text-3xl tw-font-bold tw-text-claude-charcoal tw-m-0">Builder Club Events</h1>
+          </div>
+        </div>
+        <p class="tw-text-claude-charcoal-light tw-m-0">Cambridge - January - March 2026</p>
+      </div>
+
+      <!-- Legend -->
+      <div class="tw-bg-white tw-rounded-2xl tw-shadow-sm tw-p-4 tw-mb-6 tw-border tw-border-claude-sand">
+        <div class="tw-flex tw-flex-wrap tw-gap-3 md:tw-gap-5 tw-justify-center">
+          <div class="tw-flex tw-items-center tw-gap-2">
+            <div class="tw-w-3 tw-h-3 tw-rounded-full tw-bg-claude-orange"></div>
+            <span class="tw-text-sm tw-text-claude-charcoal">Tabling Session</span>
+          </div>
+          <div class="tw-flex tw-items-center tw-gap-2">
+            <div class="tw-w-3 tw-h-3 tw-rounded-full tw-bg-claude-coral"></div>
+            <span class="tw-text-sm tw-text-claude-charcoal">Kick-off Event</span>
+          </div>
+          <div class="tw-flex tw-items-center tw-gap-2">
+            <div class="tw-w-3 tw-h-3 tw-rounded-full tw-bg-claude-tan"></div>
+            <span class="tw-text-sm tw-text-claude-charcoal">Mini Demo</span>
+          </div>
+          <div class="tw-flex tw-items-center tw-gap-2">
+            <div class="tw-w-3 tw-h-3 tw-rounded-full tw-bg-claude-sage"></div>
+            <span class="tw-text-sm tw-text-claude-charcoal">Workshop</span>
+          </div>
+          <div class="tw-flex tw-items-center tw-gap-2">
+            <div class="tw-w-3 tw-h-3 tw-rounded-full tw-bg-claude-charcoal"></div>
+            <span class="tw-text-sm tw-text-claude-charcoal">Hackathon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tw-grid lg:tw-grid-cols-3 tw-gap-6">
+        <!-- Calendar -->
+        <div class="lg:tw-col-span-2 tw-bg-white tw-rounded-2xl tw-shadow-sm tw-overflow-hidden tw-border tw-border-claude-sand">
+          <div class="tw-flex tw-items-center tw-justify-between tw-p-4 tw-border-b tw-border-claude-sand tw-bg-claude-cream-dark">
+            <button id="prevMonth" class="tw-p-2 tw-rounded-xl hover:tw-bg-claude-sand disabled:tw-opacity-30 disabled:tw-cursor-not-allowed tw-transition-colors tw-text-claude-charcoal tw-border-0 tw-bg-transparent tw-cursor-pointer">
+              <svg class="tw-w-5 tw-h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <h2 id="monthTitle" class="tw-text-lg tw-font-semibold tw-text-claude-charcoal tw-m-0">February 2026</h2>
+            <button id="nextMonth" class="tw-p-2 tw-rounded-xl hover:tw-bg-claude-sand disabled:tw-opacity-30 disabled:tw-cursor-not-allowed tw-transition-colors tw-text-claude-charcoal tw-border-0 tw-bg-transparent tw-cursor-pointer">
+              <svg class="tw-w-5 tw-h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+          <div class="tw-p-2 md:tw-p-4">
+            <div class="tw-grid tw-grid-cols-7 tw-border-b tw-border-claude-sand">
+              <div class="tw-text-center tw-text-xs tw-font-semibold tw-text-claude-charcoal-light tw-py-2">Sun</div>
+              <div class="tw-text-center tw-text-xs tw-font-semibold tw-text-claude-charcoal-light tw-py-2">Mon</div>
+              <div class="tw-text-center tw-text-xs tw-font-semibold tw-text-claude-charcoal-light tw-py-2">Tue</div>
+              <div class="tw-text-center tw-text-xs tw-font-semibold tw-text-claude-charcoal-light tw-py-2">Wed</div>
+              <div class="tw-text-center tw-text-xs tw-font-semibold tw-text-claude-charcoal-light tw-py-2">Thu</div>
+              <div class="tw-text-center tw-text-xs tw-font-semibold tw-text-claude-charcoal-light tw-py-2">Fri</div>
+              <div class="tw-text-center tw-text-xs tw-font-semibold tw-text-claude-charcoal-light tw-py-2">Sat</div>
+            </div>
+            <div id="calendarGrid" class="tw-grid tw-grid-cols-7"></div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="tw-space-y-6">
+          <!-- Selected Event -->
+          <div id="selectedEvent" class="tw-hidden tw-rounded-2xl tw-shadow-sm tw-overflow-hidden" style="border-left-width: 4px; border-left-style: solid;">
+            <div id="selectedEventHeader" class="tw-p-4">
+              <h3 id="selectedEventTitle" class="tw-font-semibold tw-m-0"></h3>
+            </div>
+            <div class="tw-bg-white tw-p-4 tw-space-y-3 tw-border tw-border-claude-sand tw-border-l-0 tw-rounded-r-2xl">
+              <div class="tw-flex tw-items-center tw-gap-2 tw-text-claude-charcoal-light">
+                <svg class="tw-w-4 tw-h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6" stroke-width="2"/>
+                  <line x1="8" y1="2" x2="8" y2="6" stroke-width="2"/>
+                  <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
+                </svg>
+                <span id="selectedEventDate" class="tw-text-sm"></span>
+              </div>
+              <div class="tw-flex tw-items-center tw-gap-2 tw-text-claude-charcoal-light">
+                <svg class="tw-w-4 tw-h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                  <polyline points="12,6 12,12 16,14" stroke-width="2"/>
+                </svg>
+                <span id="selectedEventTime" class="tw-text-sm"></span>
+              </div>
+              <div class="tw-flex tw-items-center tw-gap-2 tw-text-claude-charcoal-light">
+                <svg class="tw-w-4 tw-h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span id="selectedEventLocation" class="tw-text-sm"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- All Events List -->
+          <div class="tw-bg-white tw-rounded-2xl tw-shadow-sm tw-overflow-hidden tw-border tw-border-claude-sand">
+            <div class="tw-p-4 tw-border-b tw-border-claude-sand tw-bg-claude-cream-dark">
+              <h3 class="tw-font-semibold tw-text-claude-charcoal tw-m-0">All Events (<span id="eventCount">13</span>)</h3>
+            </div>
+            <div id="eventList" class="tw-divide-y tw-divide-claude-sand tw-max-h-96 tw-overflow-y-auto scrollbar-thin"></div>
+          </div>
+
+          <!-- Claude Builder Club Badge -->
+          <div class="tw-bg-claude-charcoal tw-rounded-2xl tw-p-5 tw-text-white tw-shadow-sm">
+            <div class="tw-flex tw-items-center tw-gap-2 tw-mb-3">
+              <img src="https://cdn.brandfetch.io/idW5s392j1/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1738315809319" alt="Claude Logo" style="height: 24px; width: auto;">
+              <span class="tw-font-semibold tw-text-lg">Builder Club</span>
+            </div>
+            <p class="tw-text-sm tw-m-0" style="color: rgba(255,255,255,0.7);">Bringing AI to Cambridge University</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="tw-mt-8 tw-text-center tw-text-sm tw-text-claude-charcoal-light">
+        <p class="tw-m-0">Powered by Claude from <span class="tw-font-medium">Anthropic</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const events = [
+    { date: '2026-01-30', time: '12:00-13:00', title: 'Tabling Session', location: 'Judge Business School', type: 'tabling' },
+    { date: '2026-02-01', time: '14:00-15:00', title: 'Kick-off Event', location: 'LR4, Engineering Department', type: 'kickoff' },
+    { date: '2026-02-04', time: '13:00-14:00', title: 'Mini Demo Session', location: 'Judge Business School', type: 'demo' },
+    { date: '2026-02-06', time: '12:00-13:00', title: 'Tabling Session', location: 'WestHub', type: 'tabling' },
+    { date: '2026-02-13', time: '12:00-13:00', title: 'Tabling Session', location: 'Sidgwick Site', type: 'tabling' },
+    { date: '2026-02-14', time: '15:00-16:00', title: 'Claude Code & Skills Workshop', location: 'LR4, Engineering Department', type: 'workshop' },
+    { date: '2026-02-19', time: '13:00-14:00', title: 'Mini Demo Session', location: 'Engineering Department Foyer', type: 'demo' },
+    { date: '2026-02-21', time: '14:00-15:00', title: 'Building with Agents Workshop', location: 'LR4, Engineering Department', type: 'workshop' },
+    { date: '2026-02-26', time: '13:00-14:00', title: 'Mini Demo Session', location: 'West Cambridge (near WestHub)', type: 'demo' },
+    { date: '2026-02-28', time: '14:00-15:00', title: 'AI Research Salon Workshop', location: 'LR4, Engineering Department', type: 'workshop' },
+    { date: '2026-03-07', time: '10:00-18:00', title: 'AI Hackathon', location: 'TBD', type: 'hackathon' },
+    { date: '2026-03-14', time: '14:00-15:00', title: 'Building with MCP Workshop', location: 'LR4, Engineering Department', type: 'workshop' },
+    { date: '2026-03-18', time: '13:00-14:00', title: 'Mini Demo Session', location: "King's Parade", type: 'demo' },
+  ];
+
+  const typeColors = {
+    tabling: { bg: '#FDF2ED', border: '#DA7756', text: '#9A4F35', dot: '#DA7756' },
+    kickoff: { bg: '#FDE8E4', border: '#E07B5D', text: '#A34B35', dot: '#E07B5D' },
+    demo: { bg: '#F9F3EC', border: '#D4A574', text: '#8B6B4A', dot: '#D4A574' },
+    workshop: { bg: '#F0F2ED', border: '#7D8471', text: '#525947', dot: '#7D8471' },
+    hackathon: { bg: '#EDECEA', border: '#1A1915', text: '#1A1915', dot: '#1A1915' },
+  };
+
+  const months = [
+    { name: 'January 2026', year: 2026, month: 0 },
+    { name: 'February 2026', year: 2026, month: 1 },
+    { name: 'March 2026', year: 2026, month: 2 },
+  ];
+
+  let currentMonthIndex = 1;
+
+  function formatDate(dateStr) {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  function formatShortDate(dateStr) {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  }
+
+  function getEventsForDate(year, month, day) {
+    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    return events.filter(e => e.date === dateStr);
+  }
+
+  function selectEvent(event) {
+    const container = document.getElementById('selectedEvent');
+    const header = document.getElementById('selectedEventHeader');
+    const title = document.getElementById('selectedEventTitle');
+    const dateEl = document.getElementById('selectedEventDate');
+    const timeEl = document.getElementById('selectedEventTime');
+    const locationEl = document.getElementById('selectedEventLocation');
+
+    container.className = 'tw-rounded-2xl tw-shadow-sm tw-overflow-hidden';
+    container.style.borderLeftWidth = '4px';
+    container.style.borderLeftStyle = 'solid';
+    container.style.borderLeftColor = typeColors[event.type].border;
+    header.style.backgroundColor = typeColors[event.type].bg;
+    title.style.color = typeColors[event.type].text;
+    title.textContent = event.title;
+    dateEl.textContent = formatDate(event.date);
+    timeEl.textContent = event.time;
+    locationEl.textContent = event.location;
+  }
+
+  function renderCalendar() {
+    const { year, month, name } = months[currentMonthIndex];
+    document.getElementById('monthTitle').textContent = name;
+    document.getElementById('prevMonth').disabled = currentMonthIndex === 0;
+    document.getElementById('nextMonth').disabled = currentMonthIndex === months.length - 1;
+
+    const grid = document.getElementById('calendarGrid');
+    grid.innerHTML = '';
+
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDay = new Date(year, month, 1).getDay();
+
+    for (let i = 0; i < firstDay; i++) {
+      const cell = document.createElement('div');
+      cell.className = 'tw-p-1 tw-min-h-[70px] md:tw-min-h-[80px]';
+      grid.appendChild(cell);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const cell = document.createElement('div');
+      const dayEvents = getEventsForDate(year, month, day);
+      const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
+
+      cell.className = `tw-p-1 tw-min-h-[70px] md:tw-min-h-[80px] tw-border tw-border-[#E8E4DD] ${isToday ? 'tw-bg-[#FDF2ED]' : 'tw-bg-white'} hover:tw-bg-[#F5F4EF] tw-transition-colors tw-rounded-lg tw-m-0.5`;
+
+      let html = `<div class="tw-text-sm tw-font-medium tw-mb-1 ${isToday ? 'tw-text-[#DA7756]' : 'tw-text-[#1A1915]'}">${day}</div>`;
+      html += '<div class="tw-space-y-1">';
+
+      dayEvents.forEach((event) => {
+        html += `<button onclick='selectEvent(${JSON.stringify(event).replace(/'/g, "\\'")})'
+          class="tw-w-full tw-text-left tw-px-1.5 tw-py-0.5 tw-rounded-md tw-text-xs tw-truncate hover:tw-opacity-80 tw-transition-opacity tw-font-medium tw-border-0 tw-cursor-pointer"
+          style="background-color: ${typeColors[event.type].bg}; color: ${typeColors[event.type].text};">
+          ${event.title}
+        </button>`;
+      });
+
+      html += '</div>';
+      cell.innerHTML = html;
+      grid.appendChild(cell);
+    }
+  }
+
+  function renderEventList() {
+    const list = document.getElementById('eventList');
+    document.getElementById('eventCount').textContent = events.length;
+
+    list.innerHTML = events.map(event => `
+      <button onclick='selectEvent(${JSON.stringify(event).replace(/'/g, "\\'")})'
+        class="tw-w-full tw-text-left tw-p-3 hover:tw-bg-[#F5F4EF] tw-transition-colors tw-border-0 tw-bg-transparent tw-cursor-pointer">
+        <div class="tw-flex tw-items-start tw-gap-3">
+          <div class="tw-w-2 tw-h-2 tw-rounded-full tw-mt-2" style="background-color: ${typeColors[event.type].dot};"></div>
+          <div class="tw-flex-1 tw-min-w-0">
+            <p class="tw-font-medium tw-text-[#1A1915] tw-text-sm tw-truncate tw-m-0">${event.title}</p>
+            <p class="tw-text-xs tw-text-[#3D3929] tw-m-0">${formatShortDate(event.date)} - ${event.time}</p>
+            <p class="tw-text-xs tw-text-[#7D8471] tw-truncate tw-m-0">${event.location}</p>
+          </div>
+        </div>
+      </button>
+    `).join('');
+  }
+
+  document.getElementById('prevMonth').addEventListener('click', () => {
+    if (currentMonthIndex > 0) { currentMonthIndex--; renderCalendar(); }
+  });
+
+  document.getElementById('nextMonth').addEventListener('click', () => {
+    if (currentMonthIndex < months.length - 1) { currentMonthIndex++; renderCalendar(); }
+  });
+
+  renderCalendar();
+  renderEventList();
+  selectEvent(events[0]);
+</script>
