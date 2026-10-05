@@ -1,0 +1,66 @@
+# CUABC-Web — Next.js rebuild (`web/`)
+
+This directory contains the Next.js rebuild of the society's Jekyll site. It lives in a
+subdirectory so that the Jekyll site at the repository root keeps building unchanged
+until the migration is cut over — that is the rollback guarantee.
+
+## Architecture
+
+- **Next.js 15, App Router, TypeScript, `output: 'export'`** — fully static, deployable
+  to GitHub Pages (or any static host).
+- **Content is not duplicated.** At build time, pages read the Jekyll sources in place:
+  `_config.yml`, `_data/*`, `_events/`, `_blogs/`, `_team/`, and the root `*.md` pages.
+  Editing content in the Jekyll files updates both builds.
+- **Styles are not duplicated.** `styles/globals.scss` mirrors `assets/css/style.scss`
+  (same variables, same `@import` order) and the partials resolve against the
+  repository-root `_sass/` via `sassOptions.includePaths` in `next.config.mjs`.
+- **Images** are copied from the repository-root `images/` into `web/public/images/` by
+  `scripts/sync-assets.mjs` (runs automatically before `dev`/`build`; the copy is
+  gitignored).
+- **Base path.** GitHub Pages serves the site at `/CUABC-Web`. `next.config.mjs` sets
+  `basePath`/`assetPrefix` from `NEXT_PUBLIC_BASE_PATH` (default `/CUABC-Web`). When the
+  site later moves to a root domain, build with `NEXT_PUBLIC_BASE_PATH=''` and every
+  URL drops the prefix — no code change needed.
+- **URLs** match Jekyll's pretty permalinks exactly (`trailingSlash: true`; collection
+  slugs keep their underscores, e.g. `/team/aditya_kalra/`).
+
+## Commands (from this directory)
+
+```
+npm install        # once
+npm run dev        # local dev server
+npm run build      # static export into out/
+```
+
+## Migration phases
+
+| Phase | Scope | Status |
+|---|---|---|
+| 0 | Skeleton: static export, basePath, SCSS pipeline, asset sync, CI build check | done |
+| 1 | Global shell (head/meta, header, menus, footer, sub-footer, menu JS) + Home | pending |
+| 2 | About + Contact | pending |
+| 3 | Events listing + details, Blogs listing + details | pending |
+| 4 | Team listing + details | pending |
+| 5 | Calendar (interactive, ported verbatim incl. Tailwind CDN) | pending |
+| 6 | Full-site QA + cutover PR + rollback runbook | pending |
+
+Every page is visually compared against the Jekyll build (desktop + mobile screenshots,
+HTML/CSS diff) before it counts as done.
+
+## Rollback / cutover
+
+While the migration is in flight, the live GitHub Pages site is still deployed by
+`.github/workflows/jekyll.yml` from `main` — this branch cannot affect it (the
+`nextjs-ci.yml` workflow here only builds, never deploys).
+
+When Phase 6 lands, cutover is a single PR to `main` that disables the `jekyll.yml`
+trigger and enables the Next.js deploy workflow. Rollback options, in order of speed:
+
+1. **Re-run the last green "Deploy Jekyll site to Pages" run** in the Actions tab —
+   restores the old site immediately (the artifact is still there).
+2. **Revert the cutover commit** — `jekyll.yml` deploys again on the next push.
+3. **Netlify**: `netlify.toml` is untouched and still builds the Jekyll site
+   (`jekyll build` → `_site`), so it remains an independent Jekyll hosting fallback.
+
+Because content lives only in the Jekyll files and both builds read the same sources,
+there is no content divergence to worry about in any rollback path.

@@ -1,0 +1,100 @@
+// Mirror of the Jekyll entry stylesheet assets/css/style.scss (front matter removed).
+// Keep the variables and the @import order byte-for-byte in sync with that file:
+// the partials resolve against the repository-root _sass/ directory configured in
+// next.config.mjs (sassOptions.includePaths), so both builds compile the same sources.
+
+// Colors - Claude brand palette
+$primary: #DA7756;          // Claude orange
+$primary-dark: #C45D3A;     // Darker orange
+$secondary: #E8A88C;        // Light coral
+$black: #1A1915;            // Claude charcoal
+$white: #ffffff;
+$white-offset: #FAF9F7;     // Claude cream
+$steel: #3D3929;            // Claude charcoal light
+
+// Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: lighten($primary, 10%);
+$link-hover-decoration: underline;
+
+// Fonts
+$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: "Playfair Display", serif, -apple-system;
+
+// Footer
+$footer-background-color: $primary;
+$footer-text-color: $white;
+$sub-footer-background-color: darken($primary, 10%);
+$sub-footer-text-color: $white;
+
+// Bootstrap 5.3.2
+
+// 1. Include Bootstrap functions first
+@import "bootstrap/functions";
+
+// 2. Include our variable overrides here
+@import "bootstrap-variables";
+
+// 3. Include main bootstrap variables and functions
+@import "bootstrap/variables";
+@import "bootstrap/variables-dark";
+@import "bootstrap/maps";
+@import "bootstrap/mixins";
+@import "bootstrap/utilities";
+
+// 4. Include optional Bootstrap components
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/containers";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+
+// 5. Include Bootstrap helpers and utilities
+@import "bootstrap/helpers";
+@import "bootstrap/utilities/api";
+
+// Libraries
+@import "libraries/hamburgers/hamburgers";
+
+// Components
+@import "components/type";
+@import "components/page";
+@import "components/header";
+@import "components/footer";
+@import "components/sub-footer";
+@import "components/logo";
+@import "components/main-menu";
+@import "components/main-menu-mobile";
+@import "components/hamburger";
+@import "components/buttons";
+@import "components/call";
+@import "components/signup";
+@import "components/discord";
+@import "components/title";
+@import "components/content";
+@import "components/intro";
+@import "components/intro-image";
+@import "components/strip";
+@import "components/feature";
+@import "components/social";
+@import "components/topic";
+
+// Pages
+@import "pages/page-home";
+@import "pages/page-teams";
+@import "pages/page-event";
+@import "pages/page-blog";
+
+body {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: $font-family-base;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}

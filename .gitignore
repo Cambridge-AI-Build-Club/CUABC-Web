@@ -11,6 +11,11 @@ _site/
 Gemfile.lock
 **/Gemfile.lock
 
+# Next.js (web/ rebuild — see web/README.md)
+web/.next
+web/out
+web/public/images
+
 # Temporary files
 tmp
 .DS_Store
