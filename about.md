@@ -10,4 +10,4 @@ Our mission is to empower students from all backgrounds to experiment with AI, b
 
 Through **workshops, hackathons, demos, and community events**, we create opportunities for hands-on learning, collaboration, and showcasing ideas. By partnering with leading AI organizations, we connect Cambridge students with cutting-edge technologies and industry expertise.
 
-At the heart of our society is a simple belief: **AI should be a platform for creativity, collaboration, and innovation.**
+At the heart of our club is a simple belief: **AI should be a platform for creativity, collaboration, and innovation.**

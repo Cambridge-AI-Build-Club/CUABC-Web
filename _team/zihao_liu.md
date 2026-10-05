@@ -8,4 +8,4 @@ promoted: true
 weight: 2
 ---
 
-Zihao Liu is 3rd year Computer and Information Engineer at Homerton College. As Ambassador and Lead of the Technical Team, Zihao represents the society across Cambridge and leads the technical team behind the society's website and events. He enjoys building practical AI projects and helping members turn their ideas into working demos.
+Zihao Liu is 3rd year Computer and Information Engineer at Homerton College. As Ambassador and Lead of the Technical Team, Zihao represents the club across Cambridge and leads the technical team behind the club's website and events. He enjoys building practical AI projects and helping members turn their ideas into working demos.

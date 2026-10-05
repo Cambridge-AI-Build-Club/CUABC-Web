@@ -9,4 +9,4 @@ weight: 1
 ---
 
 Andrew Choi is 4th year Computer and Information Engineer at Hughes Hall.
-As President, Andrew leads the society and oversees communication with partners, including Anthropic. He also manages the society’s website, blog updates, and overall strategic direction.  
+As President, Andrew leads the club and oversees communication with partners, including Anthropic. He also manages the club’s website, blog updates, and overall strategic direction.  
