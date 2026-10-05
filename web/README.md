@@ -38,7 +38,7 @@ npm run build      # static export into out/
 |---|---|---|
 | 0 | Skeleton: static export, basePath, SCSS pipeline, asset sync, CI build check | done |
 | 1 | Global shell (head/meta, header, menus, footer, sub-footer, menu JS) + Home | done |
-| 2 | About + Contact | pending |
+| 2 | About + Contact | done |
 | 3 | Events listing + details, Blogs listing + details | pending |
 | 4 | Team listing + details | pending |
 | 5 | Calendar (interactive, ported verbatim incl. Tailwind CDN) | pending |

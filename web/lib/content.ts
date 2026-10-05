@@ -66,6 +66,14 @@ export function loadSignup(): { form: string } {
   return parseYaml(readRepoFile('_data/signup.yml'))
 }
 
+export function loadContact(): {
+  email?: string
+  phone?: string
+  contact_button_link: string
+} {
+  return parseYaml(readRepoFile('_data/contact.yml'))
+}
+
 export function loadDiscord(): { discord: string } {
   return parseYaml(readRepoFile('_data/discord.yml'))
 }
