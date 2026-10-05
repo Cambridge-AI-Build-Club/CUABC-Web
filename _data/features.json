@@ -1,7 +1,6 @@
 [
   {
     "title": "Demos",
-    "description": "Showcases of student-built projects to inspire others and highlight what’s possible with AI.",
     "image": {
       "url": "images/features/noun_branding_1885335.svg",
       "width": 80,
@@ -10,7 +9,6 @@
   },
   {
     "title": "Workshops",
-    "description": "Hands-on sessions designed to teach students how to apply AI in practical and creative ways.",
     "image": {
       "url": "images/features/noun_The Process_1885341.svg",
       "width": 80,
@@ -19,7 +17,6 @@
   },
   {
     "title": "Hackathon",
-    "description": "A collaborative competition where students build AI projects, with the goal of fostering innovation and teamwork.",
     "image": {
       "url": "images/features/noun_3d modeling_1885342.svg",
       "width": 80,

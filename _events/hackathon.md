@@ -4,4 +4,4 @@ date: 2025-09-07
 weight: 3
 ---
 
-Collaborate with peers to design and build creative AI projects within a limited time.
+Teams collaborate to build AI projects within a limited time, fostering innovation and teamwork.
