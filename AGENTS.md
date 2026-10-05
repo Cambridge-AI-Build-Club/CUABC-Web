@@ -12,7 +12,7 @@ node scripts/serve.mjs out 4102   # serves the build at http://localhost:4102/
 
 Send the local URL to the reviewer and keep the server running. Site-affecting pull requests are merged **only after the reviewer has tested locally and approved**; docs-only pull requests may be merged without a preview.
 
-Merges deploy automatically via `nextjs.yml`. GitHub Pages caches pages for up to 10 minutes (`max-age=600`), so verify a deploy with a cache-busting query string before assuming it failed. If GitHub Actions runners are unavailable, `web/CUTOVER.md` documents an emergency branch-based Pages publish that bypasses Actions entirely.
+Merges deploy automatically via `nextjs.yml`. When several pull requests merge together only the newest queued deploy run executes — the intermediate queued runs are skipped automatically (expected and harmless; the last deployment contains everything). GitHub Pages caches pages for up to 10 minutes (`max-age=600`), so verify a deploy with a cache-busting query string before assuming it failed. If GitHub Actions runners are unavailable, `web/CUTOVER.md` documents an emergency branch-based Pages publish that bypasses Actions entirely. Metadata routes (`app/sitemap.ts`, `app/robots.ts`) must declare `export const dynamic = 'force-static'` — required by `output: 'export'`.
 
 ## Project Structure & Module Organization
 This repository hosts the Cambridge AI Builders Club website. The live site is the **Next.js 15 static export** in `web/` (App Router, TypeScript), deployed to GitHub Pages by `.github/workflows/nextjs.yml` on pushes to `main`. The repository is named `Cambridge-AI-Build-Club.github.io`, so the site serves at the org root `https://cambridge-ai-build-club.github.io/`.
@@ -33,6 +33,14 @@ Node 20 and npm are required for the live site.
 
 Keep generated `_site/`, `web/.next/`, `web/out/`, and `web/public/images/` (copied from `images/` by `web/scripts/sync-assets.mjs`) out of commits.
 
+## Content Editing
+Content lives at the repository root and feeds the Next.js build (and the Jekyll fallback) — there is a single copy of everything:
+
+- Card copy on listing pages comes from the **first paragraph** of a collection entry (`_events/*.md`, `_blogs/*.md`). Keep it at or under 100 characters — longer text is truncated with an ellipsis on the `/events/` and `/blogs/` listing cards.
+- The homepage **Our Events** cards pair `_data/features.json` logos with `_events/` entries by normalized title (`Demos` → `Demo`, `Workshops` → `Workshop`); keep those titles aligned so the pairing holds. One description per event, written once in the event file — `_data/features.json` holds only titles and logo images, not copy.
+- The signup form link lives in `_data/signup.yml` (also linked from the root `README.md`).
+- Markdown is rendered with `marked`/`react-markdown`, not kramdown. Plain prose only: no kramdown attribute lists (`{: .class }`) or Liquid tags in content. Straight apostrophes in prose are converted to curly ones automatically (`smartQuotes` in `web/lib/content.ts`), and headings get GitHub-style ids via rehype-slug — the output matches kramdown for the content styles used here.
+
 ## Coding Style & Naming Conventions
 Use two-space indentation for TS/TSX, SCSS, and YAML; TypeScript strict mode. Server components by default — add `'use client'` only where interaction requires it (e.g. `web/components/Hamburger.tsx`). Keep class names and DOM structure identical to the Jekyll theme: pages must stay visually indistinguishable from the original. Lowercase hyphenated page and blog filenames, existing underscore-separated team filenames. Preserve front-matter fields such as `title`, `date`, `weight`, and `layout`. Internal links go through `url()` from `web/lib/content.ts` (the `relative_url` equivalent); canonical URLs through `absoluteUrl()`.
 
@@ -40,6 +48,8 @@ VS Code recommends Prettier and Stylelint; no repository-wide lint command is co
 
 ## Testing Guidelines
 There is no project test framework. Before submitting, `npm run build` must pass, and the `Build Next.js site (no deploy)` check runs on every pull request (content-only PRs included — the root collections and `_sass/` are build inputs), validating a clean Linux build. Affected pages should also be compared against the reference build on desktop (1440px) and mobile (375px): `web/scripts/serve.mjs <dir> <port>` serves any build at the root for side-by-side comparison with the Jekyll `_site/`. Check navigation, image loading, mobile-menu toggling, and calendar month controls, event details, and dates where relevant.
+
+Judge visual parity with screenshots, not CSS byte diffs: the Next build runs autoprefixer and a CSS minifier on top of the same Sass sources, so the compiled CSS differs textually while rendering identically. Both engines compile the same `_sass/` sources, so parity holds by construction — keep `web/styles/globals.scss` line-identical to `assets/css/style.scss` when styles change.
 
 ## Commit & Pull Request Guidelines
 Every change lands via a pull request from a feature branch (see Workflow above). Site-affecting PRs stay open until the reviewer has previewed the local build and approved the merge. History uses short descriptive subjects such as `Update event titles and locations in calendar`; follow that style with focused commits, written in English. Pull requests should explain the change, link relevant issues, list validation performed, and include screenshots for visible changes. Verify event information and external community links before publishing.
