@@ -10,9 +10,10 @@ import { marked } from 'marked'
 
 const repoRoot = path.join(process.cwd(), '..')
 
-// Mirrors the GitHub Actions Jekyll build (`--baseurl /CUABC-Web`). An empty
-// NEXT_PUBLIC_BASE_PATH deploys to a root domain.
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '/CUABC-Web'
+// The GitHub Pages org site serves at the root domain. CI passes
+// NEXT_PUBLIC_BASE_PATH from actions/configure-pages (a /repo-name prefix on a
+// project-page deploy); locally the empty default matches production.
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 // Origin used for canonical URLs (og:url, sitemap, robots). Override with
 // NEXT_PUBLIC_SITE_ORIGIN when the site moves to its own domain.

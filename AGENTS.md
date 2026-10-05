@@ -7,13 +7,13 @@
 
 ```bash
 cd web && npm run build
-node scripts/serve.mjs out 4102   # serves the build at http://localhost:4102/CUABC-Web/
+node scripts/serve.mjs out 4102   # serves the build at http://localhost:4102/
 ```
 
 Send the local URL to the reviewer and keep the server running. Site-affecting pull requests are merged **only after the reviewer has tested locally and approved**; docs-only pull requests may be merged without a preview.
 
 ## Project Structure & Module Organization
-This repository hosts the Cambridge AI Builders Society website. The live site is the **Next.js 15 static export** in `web/` (App Router, TypeScript), deployed to GitHub Pages by `.github/workflows/nextjs.yml` on pushes to `main`.
+This repository hosts the Cambridge AI Builders Society website. The live site is the **Next.js 15 static export** in `web/` (App Router, TypeScript), deployed to GitHub Pages by `.github/workflows/nextjs.yml` on pushes to `main`. The repository is named `Cambridge-AI-Build-Club.github.io`, so the site serves at the org root `https://cambridge-ai-build-club.github.io/`.
 
 Content is **not duplicated**: the Next.js build reads the Jekyll-style sources at the repository root at build time — root `*.md` pages, the `_events/`, `_blogs/`, `_team/` collections (YAML front matter + Markdown), and `_data/` for navigation, contact, social, signup and SEO settings. Edit those files; never copy content into `web/`. Shared fragments live in `web/components/`, page routes in `web/app/` (one route-group directory per template, supplying the Jekyll-equivalent `<body class="page page-x">`), and helpers in `web/lib/content.ts`. The interactive calendar is `web/components/CalendarApp.tsx` (Tailwind Play CDN, `tw-` prefix). Treat `_sass/bootstrap/` and `_sass/libraries/` as vendored dependencies; `assets/css/style.scss` and `web/styles/globals.scss` mirror each other — keep both in sync when styles change.
 
@@ -23,9 +23,9 @@ The original Jekyll build is kept intact for rollback (see `web/CUTOVER.md`); `_
 Node 20 and npm are required for the live site.
 
 - `cd web && npm install`: install dependencies.
-- `cd web && npm run dev`: dev server at `http://localhost:3000` (paths include `/CUABC-Web`).
+- `cd web && npm run dev`: dev server at `http://localhost:3000`.
 - `cd web && npm run build`: static export into `web/out`.
-- `bundle install` + `MSYS2_ARG_CONV_EXCL="/CUABC-Web" bundle exec jekyll build --baseurl /CUABC-Web`: legacy Jekyll fallback build into `_site/` (rollback path only).
+- `bundle install` + `bundle exec jekyll build`: legacy Jekyll fallback build into `_site/` (rollback path only; `_config.yml` sets `baseurl: '/'` for the root-domain deploy).
 
 Keep generated `_site/`, `web/.next/`, `web/out/`, and `web/public/images/` (copied from `images/` by `web/scripts/sync-assets.mjs`) out of commits.
 
@@ -35,7 +35,7 @@ Use two-space indentation for TS/TSX, SCSS, and YAML; TypeScript strict mode. Se
 VS Code recommends Prettier and Stylelint; no repository-wide lint command is configured. Avoid reformatting unrelated files.
 
 ## Testing Guidelines
-There is no project test framework. Before submitting, `npm run build` must pass, and affected pages should be compared against the reference build on desktop (1440px) and mobile (375px): `web/scripts/serve.mjs <dir> <port>` serves any build under `/CUABC-Web` for side-by-side comparison with the Jekyll `_site/`. Check navigation, image loading, mobile-menu toggling, and calendar month controls, event details, and dates where relevant.
+There is no project test framework. Before submitting, `npm run build` must pass, and affected pages should be compared against the reference build on desktop (1440px) and mobile (375px): `web/scripts/serve.mjs <dir> <port>` serves any build at the root for side-by-side comparison with the Jekyll `_site/`. Check navigation, image loading, mobile-menu toggling, and calendar month controls, event details, and dates where relevant.
 
 ## Commit & Pull Request Guidelines
 Every change lands via a pull request from a feature branch (see Workflow above). Site-affecting PRs stay open until the reviewer has previewed the local build and approved the merge. History uses short descriptive subjects such as `Update event titles and locations in calendar`; follow that style with focused commits, written in English. Pull requests should explain the change, link relevant issues, list validation performed, and include screenshots for visible changes. Verify event information and external community links before publishing.

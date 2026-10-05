@@ -58,9 +58,31 @@ Pages" workflow run for an instant restore, or revert this single commit.
 3. **Netlify fallback:** `netlify.toml` is untouched and still builds the Jekyll site
    (`jekyll build` → `_site`), so Netlify can serve the old site independently.
 
-## Future: root-domain deployment
+## Root-domain deployment (done)
 
-The site currently builds with the `/CUABC-Web` base path. When the repository moves
-to a custom domain (root), build with `NEXT_PUBLIC_BASE_PATH=''` — links, assets and
-the deploy workflow already support it (`actions/configure-pages` reports an empty
-base path for root deployments).
+On 2026-10-05 the repository was renamed to `Cambridge-AI-Build-Club.github.io`, so the
+org site serves at the root `https://cambridge-ai-build-club.github.io/`. No deploy
+changes were needed: `actions/configure-pages` reports an empty base path and CI builds
+with `NEXT_PUBLIC_BASE_PATH=''`. A follow-up commit switched the local defaults
+(`next.config.mjs`, `lib/content.ts`, `scripts/serve.mjs`) and the docs to match.
+URLs from before the rename (`.../CUABC-Web/...`) are dead — since Pages has no
+server-side redirects, the build emits 0-second meta-refresh stubs for every former
+URL under `out/CUABC-Web/` (see `scripts/gen-redirects.mjs`).
+
+## Emergency deploy (bypassing Actions)
+
+If Actions runners are unavailable (e.g. the 2026-10-05 GitHub incident, where deploy
+runs sat queued for hours), the site can be published without Actions:
+
+1. `cd web && npm run build`
+2. Push `web/out/` to the `gh-pages` branch (init a throwaway repo, commit the export,
+   force-push to `gh-pages`; keep the `.nojekyll` marker at the branch root).
+3. Point Pages at the branch: Settings → Pages → "Deploy from a branch" →
+   `gh-pages / (root)` (API equivalent: `PUT /repos/<owner>/<repo>/pages` with
+   `build_type=legacy` and `source[branch]=gh-pages`, `source[path]=/`).
+   `web/public/.nojekyll` ships with the build so the publisher never runs Jekyll
+   over the export (it would drop the `_next/` directory).
+4. Once Actions is healthy again: switch the Pages source back to "GitHub Actions"
+   (`build_type=workflow`) and run the deploy workflow — it replaces the branch build.
+   Branch-based publishing runs on the Pages infrastructure, not Actions runners, so
+   it keeps working during Actions outages.

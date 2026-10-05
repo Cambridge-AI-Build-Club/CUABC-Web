@@ -1,5 +1,6 @@
-// Serves a static build directory under the /CUABC-Web prefix, the way GitHub Pages
-// serves the project site. Used for visual comparison against the Jekyll build.
+// Serves a static build directory at the root, the way GitHub Pages serves the
+// org site (https://cambridge-ai-build-club.github.io/). Used for local preview
+// and visual comparison against the Jekyll build.
 //
 //   node scripts/serve.mjs ../_site 4101
 //   node scripts/serve.mjs out 4102
@@ -11,7 +12,7 @@ import { fileURLToPath } from 'node:url'
 const webDir = dirname(dirname(fileURLToPath(import.meta.url)))
 const root = resolve(webDir, process.argv[2] ?? 'out')
 const port = Number(process.argv[3] ?? 4102)
-const prefix = '/CUABC-Web'
+const prefix = '/'
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -55,5 +56,5 @@ createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': MIME[extname(file)] ?? 'application/octet-stream' })
   res.end(readFileSync(file))
 }).listen(port, () => {
-  console.log(`serving ${root} at http://localhost:${port}${prefix}/`)
+  console.log(`serving ${root} at http://localhost:${port}/`)
 })

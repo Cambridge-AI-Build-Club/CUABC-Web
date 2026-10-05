@@ -3,10 +3,10 @@ import { fileURLToPath } from 'node:url'
 
 const webDir = dirname(fileURLToPath(import.meta.url))
 
-// GitHub Pages serves this repo as a project page under /CUABC-Web.
-// When the site moves to a root domain, set NEXT_PUBLIC_BASE_PATH='' and everything
-// (links, assets, canonical URLs) drops the prefix.
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '/CUABC-Web'
+// The org site (repository Cambridge-AI-Build-Club.github.io) serves at the root
+// domain, so the base path is empty. CI passes NEXT_PUBLIC_BASE_PATH from
+// actions/configure-pages, which reports a /repo-name prefix for project pages.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
