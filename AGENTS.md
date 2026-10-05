@@ -3,6 +3,15 @@
 ## Workflow
 **All changes go through a branch + pull request.** Never push directly to `main`: create a dedicated branch for every piece of work (code, content, or documentation), open a pull request into `main`, let the build check pass, and merge (squash). All recorded work — commit messages, PR titles and descriptions, documentation, and code comments — is written in **English**.
 
+**Preview before merge.** After finishing work on a branch, build it and start a local server so the site can be reviewed before merging:
+
+```bash
+cd web && npm run build
+node scripts/serve.mjs out 4102   # serves the build at http://localhost:4102/CUABC-Web/
+```
+
+Send the local URL to the reviewer and keep the server running. Site-affecting pull requests are merged **only after the reviewer has tested locally and approved**; docs-only pull requests may be merged without a preview.
+
 ## Project Structure & Module Organization
 This repository hosts the Cambridge AI Builders Society website. The live site is the **Next.js 15 static export** in `web/` (App Router, TypeScript), deployed to GitHub Pages by `.github/workflows/nextjs.yml` on pushes to `main`.
 
@@ -29,4 +38,4 @@ VS Code recommends Prettier and Stylelint; no repository-wide lint command is co
 There is no project test framework. Before submitting, `npm run build` must pass, and affected pages should be compared against the reference build on desktop (1440px) and mobile (375px): `web/scripts/serve.mjs <dir> <port>` serves any build under `/CUABC-Web` for side-by-side comparison with the Jekyll `_site/`. Check navigation, image loading, mobile-menu toggling, and calendar month controls, event details, and dates where relevant.
 
 ## Commit & Pull Request Guidelines
-Every change lands via a pull request from a feature branch (see Workflow above). History uses short descriptive subjects such as `Update event titles and locations in calendar`; follow that style with focused commits, written in English. Pull requests should explain the change, link relevant issues, list validation performed, and include screenshots for visible changes. Verify event information and external community links before publishing.
+Every change lands via a pull request from a feature branch (see Workflow above). Site-affecting PRs stay open until the reviewer has previewed the local build and approved the merge. History uses short descriptive subjects such as `Update event titles and locations in calendar`; follow that style with focused commits, written in English. Pull requests should explain the change, link relevant issues, list validation performed, and include screenshots for visible changes. Verify event information and external community links before publishing.
