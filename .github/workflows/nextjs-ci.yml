@@ -1,17 +1,12 @@
-# Build-only check for the Next.js rebuild in web/. This workflow never deploys:
-# the live GitHub Pages site stays controlled by jekyll.yml until the cutover.
+# Build-only check. Every pull request runs it (the root collections, *.md pages and
+# _sass/ partials are build inputs too, not just web/). This workflow never deploys:
+# the live site is deployed by nextjs.yml on pushes to main.
 name: Build Next.js site (no deploy)
 
 on:
   push:
     branches: [nextjs]
-    paths:
-      - 'web/**'
-      - '.github/workflows/nextjs-ci.yml'
   pull_request:
-    paths:
-      - 'web/**'
-      - '.github/workflows/nextjs-ci.yml'
   workflow_dispatch:
 
 permissions:
