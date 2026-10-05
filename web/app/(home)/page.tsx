@@ -8,7 +8,6 @@ import {
   firstParagraph,
   loadConfig,
   loadCollection,
-  loadFeatures,
   loadPage,
   markdownifyStripTruncate,
   url,
@@ -34,7 +33,6 @@ function Card({ entry, kind }: { entry: CollectionEntry; kind: 'event' | 'blog' 
 export default function HomePage() {
   const config = loadConfig()
   const page = loadPage('index.md')
-  const features = loadFeatures()
 
   // {{ site.home.limit_services | default: 6 }}
   const limit = config.home?.limit_services || 6
@@ -113,33 +111,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        {features.length > 0 && (
-          <div className="strip strip-grey">
-            <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
-              <div className="row justify-content-center">
-                {features.map((feature) => (
-                  <div className="col-12 col-md-6 col-lg-4 mb-2" key={feature.title}>
-                    <div className="feature">
-                      {feature.image && (
-                        <div className="feature-image">
-                          <img
-                            alt={`${feature.title} logo`}
-                            src={url(feature.image.url)}
-                            width={feature.image.width}
-                            height={feature.image.height}
-                          />
-                        </div>
-                      )}
-                      <h2 className="feature-title">{feature.title}</h2>
-                      <div className="feature-content">{feature.description}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
       </Shell>
     </>
   )
