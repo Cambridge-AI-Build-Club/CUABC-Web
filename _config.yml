@@ -50,6 +50,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  # `node_modules` above only matches the top level; web/ holds the parallel
+  # Next.js build and must not be copied into the Jekyll site output.
+  - web
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/

@@ -1,0 +1,30 @@
+{
+  "name": "cuabc-web-next",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Next.js rebuild of the CUABC Jekyll site. Content is read from the Jekyll sources at the repository root at build time - do not duplicate content into this directory.",
+  "scripts": {
+    "sync": "node scripts/sync-assets.mjs",
+    "predev": "node scripts/sync-assets.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/sync-assets.mjs",
+    "build": "next build"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.14",
+    "next": "^15.5.27",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-markdown": "^10.1.0",
+    "rehype-slug": "^6.0.0",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "sass": "^1.105.1",
+    "typescript": "^5.9.3"
+  }
+}
