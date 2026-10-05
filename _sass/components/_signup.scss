@@ -37,6 +37,12 @@
   strong {
     font-weight: bold;
   }
+  // The label sizes .button to its text (SIGN-UP vs DISCORD), so the paired cards'
+  // buttons end up different widths; pin them to a shared width instead.
+  .button {
+    min-width: 120px;
+    text-align: center;
+  }
   svg {
     fill: lighten($secondary, 40%);
     position: absolute;

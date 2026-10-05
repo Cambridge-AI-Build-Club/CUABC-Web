@@ -38,6 +38,11 @@
   strong {
     font-weight: bold;
   }
+  // Match the signup card: keep the card CTA at a shared width regardless of label.
+  .button {
+    min-width: 120px;
+    text-align: center;
+  }
   svg {
     fill: lighten($secondary, 40%);
     position: absolute;
