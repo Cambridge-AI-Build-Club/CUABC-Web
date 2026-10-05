@@ -23,6 +23,10 @@ until the migration is cut over — that is the rollback guarantee.
   `NEXT_PUBLIC_BASE_PATH` (empty by default; CI passes the value reported by
   `actions/configure-pages`, which would restore a `/repo-name` prefix on a
   project-page deploy).
+- **Old-URL redirects.** The rename killed the old `/CUABC-Web/...` addresses; GitHub
+  Pages has no server-side redirects, so the build generates a 0-second meta-refresh
+  stub for every former URL under `out/CUABC-Web/` (`scripts/gen-redirects.mjs`, runs
+  automatically after `next build`; skipped in subpath mode).
 - **URLs** match Jekyll's pretty permalinks exactly (`trailingSlash: true`; collection
   slugs keep their underscores, e.g. `/team/aditya_kalra/`).
 

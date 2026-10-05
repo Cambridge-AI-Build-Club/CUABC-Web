@@ -65,4 +65,6 @@ org site serves at the root `https://cambridge-ai-build-club.github.io/`. No dep
 changes were needed: `actions/configure-pages` reports an empty base path and CI builds
 with `NEXT_PUBLIC_BASE_PATH=''`. A follow-up commit switched the local defaults
 (`next.config.mjs`, `lib/content.ts`, `scripts/serve.mjs`) and the docs to match.
-URLs from before the rename (`.../CUABC-Web/...`) are dead.
+URLs from before the rename (`.../CUABC-Web/...`) are dead — since Pages has no
+server-side redirects, the build emits 0-second meta-refresh stubs for every former
+URL under `out/CUABC-Web/` (see `scripts/gen-redirects.mjs`).
