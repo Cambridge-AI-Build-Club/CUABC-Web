@@ -10,6 +10,7 @@ import {
   loadCollection,
   loadFeatures,
   loadPage,
+  markdownifyStrip,
   markdownifyStripTruncate,
   url,
   type CollectionEntry,
@@ -43,9 +44,9 @@ interface MergedEntry {
   event?: CollectionEntry
 }
 
-// One card per activity, combining the two former homepage sections: the feature
-// card's logo and description plus the event's linked title and excerpt. Entries
-// without a counterpart on the other side are still rendered.
+// One card per activity, merging the two former homepage sections: the feature card's
+// logo plus the event's linked title and single merged description. Entries without a
+// counterpart on the other side are still rendered.
 function MergedCard({ feature, event }: MergedEntry) {
   return (
     <div className="col-12 col-md-6 col-lg-4 mb-2">
@@ -67,10 +68,9 @@ function MergedCard({ feature, event }: MergedEntry) {
             String(feature?.title ?? '')
           )}
         </h2>
-        {feature && <div className="feature-content">{feature.description}</div>}
         {event && (
           <div className="feature-content">
-            <p>{markdownifyStripTruncate(firstParagraph(event.body), 100)}</p>
+            <p>{markdownifyStrip(firstParagraph(event.body))}</p>
           </div>
         )}
       </div>

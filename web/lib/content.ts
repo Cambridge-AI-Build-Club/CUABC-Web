@@ -99,7 +99,7 @@ export function loadSocial(): SocialItem[] {
 
 export interface FeatureItem {
   title: string
-  description: string
+  description?: string
   image?: { url: string; width: number; height: number }
 }
 
@@ -137,10 +137,15 @@ export function truncate(s: string, length: number): string {
   return s.slice(0, length - 3) + '...'
 }
 
+// `| markdownify | strip_html` (no truncation - used where the copy is written to fit)
+export function markdownifyStrip(md: string): string {
+  const html = marked.parse(md, { async: false })
+  return html.replace(/<[^>]*>/g, '')
+}
+
 // `| markdownify | strip_html | truncate: N`
 export function markdownifyStripTruncate(md: string, length: number): string {
-  const html = marked.parse(md, { async: false })
-  return truncate(html.replace(/<[^>]*>/g, ''), length)
+  return truncate(markdownifyStrip(md), length)
 }
 
 // `{{ team.excerpt | truncate: N }}`: Jekyll's excerpt renders to the *HTML* of the
