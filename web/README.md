@@ -49,18 +49,21 @@ HTML/CSS diff) before it counts as done. Verification tooling: `scripts/serve.mj
 serves any static build under the `/CUABC-Web` prefix the way GitHub Pages does, so the
 Jekyll `_site/` and the Next.js `out/` can be browsed side by side.
 
-## Quirks replicated from the Jekyll templates (on purpose, for parity)
+## Quirks replicated during the migration, then fixed after cutover
 
-These are pre-existing behaviours of the live site that the Next.js port reproduces
-verbatim. They can be fixed later in a single pass on both sides if desired:
+These were Jekyll template bugs replicated 1:1 for exact parity during the migration,
+and cleaned up once the site was live:
 
-- `og:url` renders empty (`{{ url }}` is an undefined Liquid variable in
-  `default.html`).
-- `twitter:site` / `twitter:creator` render empty (`site.seo.*` is read instead of
-  `site.data.seo.*`).
-- The homepage hero image `src` is a bare relative path (`images/illustrations/...`)
-  because `home.html` calls the Jekyll-unknown `relURL` filter, which passes the value
-  through unchanged.
+- `og:url` now carries the real absolute page URL (the Jekyll template rendered it
+  empty — it read an undefined `url` variable).
+- The empty `twitter:site` / `twitter:creator` meta tags are gone (the template read
+  `site.seo.*` instead of `site.data.seo.*`, and the configured values were the theme
+  author's handle anyway).
+- The homepage hero image `src` is now a base-path-aware absolute URL (the Jekyll
+  template called the nonexistent `relURL` filter and emitted a fragile relative path).
+- The sub-footer copyright now reads `© 2026 Cambridge AI Builder Club`
+  (`_data/seo.yml`), replacing the theme attribution.
+- Added `sitemap.xml` and `robots.txt` (the Jekyll site had none).
 
 ## Calendar page notes
 

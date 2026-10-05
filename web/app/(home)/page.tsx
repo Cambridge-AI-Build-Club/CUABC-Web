@@ -55,7 +55,7 @@ export default function HomePage() {
 
   return (
     <>
-      <PageMeta title={title} description={description} />
+      <PageMeta title={title} description={description} path="/" />
       <Shell path="/">
         <div className="intro">
           <div className="container">
@@ -67,10 +67,7 @@ export default function HomePage() {
               </div>
               {introImage && (
                 <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                  {/* home.html renders the src through the (Jekyll-unknown) relURL
-                      filter, which outputs the front-matter value verbatim. Kept for
-                      exact parity with the live site. */}
-                  <img alt={title} className={introImageClass} src={introImage} />
+                  <img alt={title} className={introImageClass} src={url(introImage)} />
                 </div>
               )}
             </div>

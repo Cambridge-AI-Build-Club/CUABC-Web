@@ -16,7 +16,7 @@ export default function EventsPage() {
   const title = page.title ?? 'Events'
   return (
     <>
-      <PageMeta title={title} description={page.description} />
+      <PageMeta title={title} description={page.description} path="/events/" />
       <Shell path="/events/">
         <div className="intro">
           <div className="container">

@@ -34,7 +34,7 @@ export default function TeamPage() {
 
   return (
     <>
-      <PageMeta title={title} description={page.description} />
+      <PageMeta title={title} description={page.description} path="/team/" />
       <Shell path="/team/">
         <div className="intro">
           <div className="container">

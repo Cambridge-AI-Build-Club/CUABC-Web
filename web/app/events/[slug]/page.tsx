@@ -19,7 +19,7 @@ export default async function EventPage({
   const title = String(entry.title ?? slug)
   return (
     <>
-      <PageMeta title={title} />
+      <PageMeta title={title} path={`/events/${slug}/`} />
       <Shell path={`/events/${slug}/`}>
         <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
           <div className="row justify-content-start">

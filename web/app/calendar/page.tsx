@@ -43,7 +43,7 @@ export default function CalendarPage() {
   const title = page.title ?? 'Event Calendar'
   return (
     <>
-      <PageMeta title={title} description={page.description} />
+      <PageMeta title={title} description={page.description} path="/calendar/" />
       <Shell path="/calendar/">
         {/* Tailwind CSS for calendar (Play CDN, as in the Jekyll layout) */}
         <script src="https://cdn.tailwindcss.com" />

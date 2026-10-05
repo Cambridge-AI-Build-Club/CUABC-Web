@@ -10,7 +10,7 @@ export default function ContactPage() {
   const title = page.title ?? 'Contact'
   return (
     <>
-      <PageMeta title={title} description={page.description} />
+      <PageMeta title={title} description={page.description} path="/contact/" />
       <Shell path="/contact/">
         <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
           <div className="row justify-content-start">

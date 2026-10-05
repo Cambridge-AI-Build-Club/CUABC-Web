@@ -20,7 +20,7 @@ export default async function TeamMemberPage({
   const title = String(entry.title ?? slug)
   return (
     <>
-      <PageMeta title={title} />
+      <PageMeta title={title} path={`/team/${slug}/`} />
       <Shell path={`/team/${slug}/`}>
         <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
           <div className="row justify-content-start">

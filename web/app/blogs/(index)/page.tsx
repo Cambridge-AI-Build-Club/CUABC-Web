@@ -16,7 +16,7 @@ export default function BlogsPage() {
   const title = page.title ?? 'Blogs'
   return (
     <>
-      <PageMeta title={title} description={page.description} />
+      <PageMeta title={title} description={page.description} path="/blogs/" />
       <Shell path="/blogs/">
         <div className="intro">
           <div className="container">

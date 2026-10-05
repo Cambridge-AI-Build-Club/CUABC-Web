@@ -34,4 +34,22 @@ Contributions are welcome! If you’d like to improve the site or suggest new fe
 
 ---
 
+## Development
+
+The site is a **Next.js 15 static export** (in `web/`) deployed to GitHub Pages by GitHub Actions on every push to `main`.
+
+- **Content** lives at the repo root in Jekyll-style sources — `index.md` / `about.md` / …, the `_events/`, `_blogs/`, `_team/` collections, and `_data/` for navigation, contact and social links. The Next.js build reads these files directly; there is no duplicated content. Edit them and the site updates.
+- **Local development:**
+
+  ```bash
+  cd web
+  npm install
+  npm run dev      # dev server
+  npm run build    # static export into web/out
+  ```
+
+- **Legacy fallback:** the original Jekyll build is kept intact (`bundle exec jekyll build`) for rollback purposes; see `web/CUTOVER.md` for the deploy/rollback runbook.
+
+---
+
 Together, let’s build the future with AI!  

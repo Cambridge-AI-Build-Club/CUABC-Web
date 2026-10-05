@@ -14,6 +14,15 @@ const repoRoot = path.join(process.cwd(), '..')
 // NEXT_PUBLIC_BASE_PATH deploys to a root domain.
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '/CUABC-Web'
 
+// Origin used for canonical URLs (og:url, sitemap, robots). Override with
+// NEXT_PUBLIC_SITE_ORIGIN when the site moves to its own domain.
+export const siteOrigin = process.env.NEXT_PUBLIC_SITE_ORIGIN ?? 'https://cambridge-ai-build-club.github.io'
+
+// Absolute canonical URL for a Jekyll-style page path (leading + trailing slash).
+export function absoluteUrl(pagePath: string): string {
+  return `${siteOrigin}${basePath}${pagePath}`
+}
+
 // Replicates Liquid's relative_url: prefixes the base path, keeps trailing slashes
 // ("/blogs/" stays "/blogs/", "events" stays without one) and percent-encodes like
 // Addressable does (e.g. spaces in SVG filenames become %20).

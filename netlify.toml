@@ -1,7 +1,9 @@
+# Netlify builds the Next.js static export (same as the GitHub Actions deploy).
+# Netlify serves the site at its own domain root, so the /CUABC-Web base path is off.
 [build]
-  command = "jekyll build"
-  publish = "_site"
+  command = "cd web && npm ci && npm run build"
+  publish = "web/out"
 
 [build.environment]
-  JEKYLL_ENV = "production"
-  RUBY_VERSION = "3.2.2"
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_BASE_PATH = ""

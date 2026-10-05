@@ -9,7 +9,7 @@ export default function AboutPage() {
   const title = page.title ?? 'About'
   return (
     <>
-      <PageMeta title={title} description={page.description} />
+      <PageMeta title={title} description={page.description} path="/about/" />
       <Shell path="/about/">
         <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
           <div className="row justify-content-start">
