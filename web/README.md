@@ -41,7 +41,7 @@ npm run build      # static export into out/
 | 2 | About + Contact | done |
 | 3 | Events listing + details, Blogs listing + details | done |
 | 4 | Team listing + details | done |
-| 5 | Calendar (interactive, ported verbatim incl. Tailwind CDN) | pending |
+| 5 | Calendar (interactive, ported verbatim incl. Tailwind CDN) | done |
 | 6 | Full-site QA + cutover PR + rollback runbook | pending |
 
 Every page is visually compared against the Jekyll build (desktop + mobile screenshots,
@@ -63,6 +63,21 @@ verbatim. They can be fixed later in a single pass on both sides if desired:
   through unchanged.
 - The sub-footer copyright line links to www.zerostatic.io (theme attribution in
   `_data/seo.yml`).
+
+## Calendar page notes
+
+- The Tailwind **Play CDN** (`cdn.tailwindcss.com` + inline config with the `tw-`
+  prefix) is kept exactly as in `_layouts/calendar.html`, so the calendar styles are
+  generated at runtime client-side, identically to the Jekyll site. Replacing it with
+  a locally built Tailwind setup (or porting the classes to the site's SCSS) is a
+  possible future cleanup.
+- The 14-event array, the "Cancelded" typo, and the brandfetch hot-linked logos are
+  verbatim ports.
+- Unlike Jekyll (which ships an empty grid and fills it with JS after load), the React
+  page renders the initialised state (February 2026, first event selected) directly
+  into the static HTML. The visible result and all interactions are identical; the
+  "today" highlight is computed by the browser at hydration, matching Jekyll's
+  runtime behaviour.
 
 ## Rollback / cutover
 
