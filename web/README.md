@@ -61,8 +61,6 @@ verbatim. They can be fixed later in a single pass on both sides if desired:
 - The homepage hero image `src` is a bare relative path (`images/illustrations/...`)
   because `home.html` calls the Jekyll-unknown `relURL` filter, which passes the value
   through unchanged.
-- The sub-footer copyright line links to www.zerostatic.io (theme attribution in
-  `_data/seo.yml`).
 
 ## Calendar page notes
 
