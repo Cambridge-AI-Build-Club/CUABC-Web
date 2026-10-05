@@ -42,7 +42,7 @@ npm run build      # static export into out/
 | 3 | Events listing + details, Blogs listing + details | done |
 | 4 | Team listing + details | done |
 | 5 | Calendar (interactive, ported verbatim incl. Tailwind CDN) | done |
-| 6 | Full-site QA + cutover PR + rollback runbook | pending |
+| 6 | Full-site QA + cutover PR + rollback runbook | done (see CUTOVER.md) |
 
 Every page is visually compared against the Jekyll build (desktop + mobile screenshots,
 HTML/CSS diff) before it counts as done. Verification tooling: `scripts/serve.mjs`
@@ -81,18 +81,18 @@ verbatim. They can be fixed later in a single pass on both sides if desired:
 
 ## Rollback / cutover
 
-While the migration is in flight, the live GitHub Pages site is still deployed by
-`.github/workflows/jekyll.yml` from `main` — this branch cannot affect it (the
-`nextjs-ci.yml` workflow here only builds, never deploys).
+While the migration was in flight, the live GitHub Pages site stayed deployed by
+`.github/workflows/jekyll.yml` from `main`. The full cutover procedure, the PR
+description and the rollback runbook live in [`CUTOVER.md`](./CUTOVER.md). Summary:
 
-When Phase 6 lands, cutover is a single PR to `main` that disables the `jekyll.yml`
-trigger and enables the Next.js deploy workflow. Rollback options, in order of speed:
-
-1. **Re-run the last green "Deploy Jekyll site to Pages" run** in the Actions tab —
-   restores the old site immediately (the artifact is still there).
-2. **Revert the cutover commit** — `jekyll.yml` deploys again on the next push.
-3. **Netlify**: `netlify.toml` is untouched and still builds the Jekyll site
-   (`jekyll build` → `_site`), so it remains an independent Jekyll hosting fallback.
+- **Cutover** = merge the `nextjs` branch PR: it enables `nextjs.yml` (build `web/`,
+  deploy to Pages) and disables the `jekyll.yml` trigger in one commit.
+- **Rollback 1 — instant:** Actions tab → "Deploy Jekyll site to Pages" → last green
+  run → Re-run all jobs (the old artifact is redeployed as-is).
+- **Rollback 2 — one commit:** revert the cutover commit; the same push redeploys the
+  Jekyll site.
+- **Rollback 3 — fallback:** `netlify.toml` still builds the Jekyll site, so Netlify
+  can serve the old site independently.
 
 Because content lives only in the Jekyll files and both builds read the same sources,
 there is no content divergence to worry about in any rollback path.
