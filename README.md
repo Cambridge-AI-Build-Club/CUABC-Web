@@ -12,7 +12,7 @@ Our mission is simple: **make AI a platform for creativity, collaboration, and i
 
 We’d love for you to join our community!  
 
-- **[Sign Up Form](https://docs.google.com/forms/d/e/1FAIpQLSfQHUvX3wfwsOjh8QccgevXW-bNf4osaYW-jXB2MRjiaHfvSQ/viewform?usp=sharing&ouid=114436783666251377569)** – Become a member of the society.  
+- **[Sign Up Form](https://www.jotform.com/253555944387168)** – Become a member of the society.  
 - **[Join Our Discord](https://discord.gg/geyYtMCcf5)** – Stay connected with updates, events, and opportunities.  
 - **[Visit Our Website](https://cambridge-ai-build-club.github.io/CUABC-Web/)** – Explore upcoming events, blogs, and more.  
 
