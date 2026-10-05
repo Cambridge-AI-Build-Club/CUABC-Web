@@ -17,10 +17,12 @@ until the migration is cut over — that is the rollback guarantee.
 - **Images** are copied from the repository-root `images/` into `web/public/images/` by
   `scripts/sync-assets.mjs` (runs automatically before `dev`/`build`; the copy is
   gitignored).
-- **Base path.** GitHub Pages serves the site at `/CUABC-Web`. `next.config.mjs` sets
-  `basePath`/`assetPrefix` from `NEXT_PUBLIC_BASE_PATH` (default `/CUABC-Web`). When the
-  site later moves to a root domain, build with `NEXT_PUBLIC_BASE_PATH=''` and every
-  URL drops the prefix — no code change needed.
+- **Base path.** The repository is named `Cambridge-AI-Build-Club.github.io`, so the
+  org site serves at the root `https://cambridge-ai-build-club.github.io/` and the base
+  path is empty. `next.config.mjs` sets `basePath`/`assetPrefix` from
+  `NEXT_PUBLIC_BASE_PATH` (empty by default; CI passes the value reported by
+  `actions/configure-pages`, which would restore a `/repo-name` prefix on a
+  project-page deploy).
 - **URLs** match Jekyll's pretty permalinks exactly (`trailingSlash: true`; collection
   slugs keep their underscores, e.g. `/team/aditya_kalra/`).
 
@@ -46,7 +48,7 @@ npm run build      # static export into out/
 
 Every page is visually compared against the Jekyll build (desktop + mobile screenshots,
 HTML/CSS diff) before it counts as done. Verification tooling: `scripts/serve.mjs`
-serves any static build under the `/CUABC-Web` prefix the way GitHub Pages does, so the
+serves any static build at the root the way GitHub Pages does, so the
 Jekyll `_site/` and the Next.js `out/` can be browsed side by side.
 
 ## Quirks replicated during the migration, then fixed after cutover

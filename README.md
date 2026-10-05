@@ -14,7 +14,7 @@ We’d love for you to join our community!
 
 - **[Sign Up Form](https://www.jotform.com/253555944387168)** – Become a member of the society.  
 - **[Join Our Discord](https://discord.gg/geyYtMCcf5)** – Stay connected with updates, events, and opportunities.  
-- **[Visit Our Website](https://cambridge-ai-build-club.github.io/CUABC-Web/)** – Explore upcoming events, blogs, and more.  
+- **[Visit Our Website](https://cambridge-ai-build-club.github.io/)** – Explore upcoming events, blogs, and more.  
 
 ---
 

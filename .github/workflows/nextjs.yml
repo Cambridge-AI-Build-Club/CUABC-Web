@@ -47,7 +47,7 @@ jobs:
         run: npm run build
         working-directory: web
         env:
-          # Project pages deploy under /CUABC-Web; empty for a root-domain deploy
+          # Pages base path from the API: empty for the org site at the root domain
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

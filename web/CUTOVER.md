@@ -58,9 +58,11 @@ Pages" workflow run for an instant restore, or revert this single commit.
 3. **Netlify fallback:** `netlify.toml` is untouched and still builds the Jekyll site
    (`jekyll build` → `_site`), so Netlify can serve the old site independently.
 
-## Future: root-domain deployment
+## Root-domain deployment (done)
 
-The site currently builds with the `/CUABC-Web` base path. When the repository moves
-to a custom domain (root), build with `NEXT_PUBLIC_BASE_PATH=''` — links, assets and
-the deploy workflow already support it (`actions/configure-pages` reports an empty
-base path for root deployments).
+On 2026-10-05 the repository was renamed to `Cambridge-AI-Build-Club.github.io`, so the
+org site serves at the root `https://cambridge-ai-build-club.github.io/`. No deploy
+changes were needed: `actions/configure-pages` reports an empty base path and CI builds
+with `NEXT_PUBLIC_BASE_PATH=''`. A follow-up commit switched the local defaults
+(`next.config.mjs`, `lib/content.ts`, `scripts/serve.mjs`) and the docs to match.
+URLs from before the rename (`.../CUABC-Web/...`) are dead.
