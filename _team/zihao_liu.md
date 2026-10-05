@@ -1,6 +1,7 @@
 ---
 title: "Zihao Liu"
 date: 2026-10-05
+image: "images/team/zihao_liu.png"
 jobtitle: "Ambassador & Lead of Technical Team"
 linkedinurl: "https://www.linkedin.com/in/zihao-liu-470986208/"
 promoted: true

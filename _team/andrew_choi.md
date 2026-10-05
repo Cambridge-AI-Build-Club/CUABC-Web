@@ -2,7 +2,7 @@
 title: "Andrew Choi"
 date: 2025-09-07
 image: "images/team/andrew_choi.png"
-jobtitle: "President & Lead Organiser"
+jobtitle: "Ambassador & Lead of Outreach Team"
 linkedinurl: "https://www.linkedin.com/in/jaehyung-andrew-choi/"
 promoted: true
 weight: 1
