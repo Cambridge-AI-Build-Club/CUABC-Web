@@ -9,4 +9,4 @@ weight: 999
 ---
 
 Lauren is 4th year Engineer at Peterhouse College.
-Lauren manages the society’s finances, inquiries, and communications. She also leads community engagement on Discord, ensuring members feel welcome and supported.  
+Lauren manages the club’s finances, inquiries, and communications. She also leads community engagement on Discord, ensuring members feel welcome and supported.  

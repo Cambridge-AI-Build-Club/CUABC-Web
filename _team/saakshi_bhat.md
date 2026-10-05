@@ -9,4 +9,4 @@ weight: 999
 ---
 
 Saakshi is 4th year Engineer at Clare College.
-As Sponsorship Director, she manages partnerships, sponsorships, and external outreach. She also works to build strong relationships with sponsors and collaborators, ensuring the society has the resources and support to thrive.
+As Sponsorship Director, she manages partnerships, sponsorships, and external outreach. She also works to build strong relationships with sponsors and collaborators, ensuring the club has the resources and support to thrive.

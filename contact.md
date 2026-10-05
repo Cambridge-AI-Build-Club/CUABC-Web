@@ -4,7 +4,7 @@ layout: contact
 description: Contact
 ---
 
-Have a question about the society, our events, or how to get involved?  
+Have a question about the club, our events, or how to get involved?  
 We’d love to hear from you!  
 
 Whether you’d like to:  

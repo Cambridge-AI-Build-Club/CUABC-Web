@@ -9,4 +9,4 @@ weight: 999
 ---
 
 Aditya is 4th year Engineer at Queen's College.
-He oversees the planning and delivery of the society’s events, from idea to execution. He ensures activities run smoothly and creates opportunities for members to connect, learn, and enjoy being part of the community.
+He oversees the planning and delivery of the club’s events, from idea to execution. He ensures activities run smoothly and creates opportunities for members to connect, learn, and enjoy being part of the community.

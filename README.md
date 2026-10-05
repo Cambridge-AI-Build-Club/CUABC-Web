@@ -1,7 +1,7 @@
-# Cambridge AI Builders Society   
+# Cambridge AI Builders Club   
 
-Welcome to the official repository for the **Cambridge AI Builders Society** website.  
-Our society is dedicated to empowering students at Cambridge to explore, learn, and innovate with artificial intelligence.  
+Welcome to the official repository for the **Cambridge AI Builders Club** website.  
+Our club is dedicated to empowering students at Cambridge to explore, learn, and innovate with artificial intelligence.  
 
 Through **workshops, hackathons, demos, and community events**, we provide hands-on opportunities for students of all backgrounds—whether you’re an experienced developer or completely new to AI.  
 Our mission is simple: **make AI a platform for creativity, collaboration, and innovation.**  
@@ -12,7 +12,7 @@ Our mission is simple: **make AI a platform for creativity, collaboration, and i
 
 We’d love for you to join our community!  
 
-- **[Sign Up Form](https://www.jotform.com/253555944387168)** – Become a member of the society.  
+- **[Sign Up Form](https://www.jotform.com/253555944387168)** – Become a member of the club.  
 - **[Join Our Discord](https://discord.gg/geyYtMCcf5)** – Stay connected with updates, events, and opportunities.  
 - **[Visit Our Website](https://cambridge-ai-build-club.github.io/)** – Explore upcoming events, blogs, and more.  
 
@@ -29,7 +29,7 @@ We’d love for you to join our community!
 
 ## Repository Info  
 
-This repo contains the source code for the Cambridge AI Builders Society website.  
+This repo contains the source code for the Cambridge AI Builders Club website.  
 Contributions are welcome! If you’d like to improve the site or suggest new features, please open an issue or submit a pull request.  
 
 ---

@@ -1,6 +1,6 @@
 # CUABC-Web — Next.js rebuild (`web/`)
 
-This directory contains the Next.js rebuild of the society's Jekyll site. It lives in a
+This directory contains the Next.js rebuild of the club's Jekyll site. It lives in a
 subdirectory so that the Jekyll site at the repository root keeps building unchanged
 until the migration is cut over — that is the rollback guarantee.
 
