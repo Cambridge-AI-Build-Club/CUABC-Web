@@ -13,10 +13,15 @@
   @include media-breakpoint-up(sm) {
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    // Never let the button wrap below the text by accident: the text block shrinks
+    // (and wraps internally) instead of pushing the row over the card's width.
+    flex-wrap: nowrap;
   }
   .signup-box-top {
-    flex: 1 0 auto;
+    // Shrinkable so the text wraps inside the card instead of pushing the box
+    // (and, below sm, the whole row) wider than the card and getting clipped.
+    flex: 1 1 auto;
+    min-width: 0;
     padding: 20px;
     @include media-breakpoint-up(md) {
     }
@@ -36,6 +41,12 @@
   }
   strong {
     font-weight: bold;
+  }
+  // The label sizes .button to its text (SIGN-UP vs DISCORD), so the paired cards'
+  // buttons end up different widths; pin them to a shared width instead.
+  .button {
+    min-width: 120px;
+    text-align: center;
   }
   svg {
     fill: lighten($secondary, 40%);
