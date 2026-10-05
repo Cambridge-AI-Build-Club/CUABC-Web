@@ -37,7 +37,7 @@ npm run build      # static export into out/
 | Phase | Scope | Status |
 |---|---|---|
 | 0 | Skeleton: static export, basePath, SCSS pipeline, asset sync, CI build check | done |
-| 1 | Global shell (head/meta, header, menus, footer, sub-footer, menu JS) + Home | pending |
+| 1 | Global shell (head/meta, header, menus, footer, sub-footer, menu JS) + Home | done |
 | 2 | About + Contact | pending |
 | 3 | Events listing + details, Blogs listing + details | pending |
 | 4 | Team listing + details | pending |
@@ -45,7 +45,24 @@ npm run build      # static export into out/
 | 6 | Full-site QA + cutover PR + rollback runbook | pending |
 
 Every page is visually compared against the Jekyll build (desktop + mobile screenshots,
-HTML/CSS diff) before it counts as done.
+HTML/CSS diff) before it counts as done. Verification tooling: `scripts/serve.mjs`
+serves any static build under the `/CUABC-Web` prefix the way GitHub Pages does, so the
+Jekyll `_site/` and the Next.js `out/` can be browsed side by side.
+
+## Quirks replicated from the Jekyll templates (on purpose, for parity)
+
+These are pre-existing behaviours of the live site that the Next.js port reproduces
+verbatim. They can be fixed later in a single pass on both sides if desired:
+
+- `og:url` renders empty (`{{ url }}` is an undefined Liquid variable in
+  `default.html`).
+- `twitter:site` / `twitter:creator` render empty (`site.seo.*` is read instead of
+  `site.data.seo.*`).
+- The homepage hero image `src` is a bare relative path (`images/illustrations/...`)
+  because `home.html` calls the Jekyll-unknown `relURL` filter, which passes the value
+  through unchanged.
+- The sub-footer copyright line links to www.zerostatic.io (theme attribution in
+  `_data/seo.yml`).
 
 ## Rollback / cutover
 
