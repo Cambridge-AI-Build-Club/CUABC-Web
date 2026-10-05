@@ -5,7 +5,7 @@ image: "images/team/aditya_kalra.png"
 jobtitle: "Events Director"
 linkedinurl: "https://www.linkedin.com/in/adityakalra6b963b1b6/"
 promoted: false
-weight: 5 
+weight: 999
 ---
 
 Aditya is 4th year Engineer at Queen's College.

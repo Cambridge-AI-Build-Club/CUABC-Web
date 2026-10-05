@@ -5,7 +5,7 @@ image: "images/team/saakshi_bhat.png"
 jobtitle: "Sponsorship Director"
 linkedinurl: "https://www.linkedin.com/in/saakshi-bhat/"
 promoted: false
-weight: 4 
+weight: 999
 ---
 
 Saakshi is 4th year Engineer at Clare College.
