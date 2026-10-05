@@ -4,7 +4,7 @@ date: 2025-09-07
 image: "images/team/hanzhang_shen.png"
 jobtitle: "Vice President & Technical Lead"
 linkedinurl: "https://www.linkedin.com/in/hanzhang-shen-747629224/"
-promoted: true
+promoted: false
 weight: 2
 ---
 

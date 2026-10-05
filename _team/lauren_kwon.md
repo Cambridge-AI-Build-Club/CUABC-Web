@@ -4,7 +4,7 @@ date: 2025-09-07
 image: "images/team/lauren_kwon.png"
 jobtitle: "Secretary & Treasurer"
 linkedinurl: "https://www.linkedin.com/in/lauren-kwon-9935b5254/"
-promoted: true
+promoted: false
 weight: 3 
 ---
 

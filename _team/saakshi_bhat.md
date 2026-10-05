@@ -4,7 +4,7 @@ date: 2025-09-07
 image: "images/team/saakshi_bhat.png"
 jobtitle: "Sponsorship Director"
 linkedinurl: "https://www.linkedin.com/in/saakshi-bhat/"
-promoted: true
+promoted: false
 weight: 4 
 ---
 
