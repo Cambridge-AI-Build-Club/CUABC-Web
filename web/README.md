@@ -40,7 +40,7 @@ npm run build      # static export into out/
 | 1 | Global shell (head/meta, header, menus, footer, sub-footer, menu JS) + Home | done |
 | 2 | About + Contact | done |
 | 3 | Events listing + details, Blogs listing + details | done |
-| 4 | Team listing + details | pending |
+| 4 | Team listing + details | done |
 | 5 | Calendar (interactive, ported verbatim incl. Tailwind CDN) | pending |
 | 6 | Full-site QA + cutover PR + rollback runbook | pending |
 

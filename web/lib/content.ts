@@ -104,6 +104,19 @@ export function loadSeo(): { copyright_text?: string } {
 
 // --- markdown helpers (Liquid filter parity) ---
 
+// kramdown converts straight quotes, dashes and ellipses in prose (smart_quotes is on
+// by default) and marked/react-markdown do not. The subset below covers the patterns
+// that appear in this content; applied to bodies at load time so excerpts (which
+// truncate the HTML string and are therefore length-sensitive) and page rendering see
+// the same text kramdown would produce.
+export function smartQuotes(s: string): string {
+  return s
+    .replace(/(\w)'(?=\w)/g, '$1\u2019') // Queen's -> Queen’s
+    .replace(/([ \t])---([ \t])/g, '$1\u2014$2') // word --- word -> —
+    .replace(/([ \t])--([ \t])/g, '$1\u2013$2') // word -- word -> –
+    .replace(/\.\.\./g, '\u2026') // ... -> …
+}
+
 // Jekyll's default excerpt separator: the first paragraph.
 export function firstParagraph(body: string): string {
   return body.split('\n\n')[0] ?? ''
@@ -121,6 +134,14 @@ export function markdownifyStripTruncate(md: string, length: number): string {
   return truncate(html.replace(/<[^>]*>/g, ''), length)
 }
 
+// `{{ team.excerpt | truncate: N }}`: Jekyll's excerpt renders to the *HTML* of the
+// first paragraph, and the template truncates that HTML string directly - the closing
+// </p> gets cut off and browsers auto-close it. Replicated verbatim.
+export function excerptHtmlTruncate(body: string, length: number): string {
+  const html = marked.parse(firstParagraph(body), { async: false })
+  return truncate(html, length)
+}
+
 // --- pages (root *.md) and collections (_events, _blogs, _team) ---
 
 export interface Page {
@@ -132,7 +153,7 @@ export interface Page {
 
 export function loadPage(file: string): Page {
   const { data, content } = matter(readRepoFile(file))
-  return { ...data, body: content }
+  return { ...data, body: smartQuotes(content) }
 }
 
 export interface CollectionEntry extends Record<string, unknown> {
@@ -147,7 +168,7 @@ export function loadCollection(dir: string, sortBy?: string): CollectionEntry[] 
     .filter((f) => f.endsWith('.md'))
     .map((f) => {
       const { data, content } = matter(readRepoFile(path.join(dir, f)))
-      return { slug: f.replace(/\.md$/, ''), ...data, body: content }
+      return { slug: f.replace(/\.md$/, ''), ...data, body: smartQuotes(content) }
     })
   if (sortBy) {
     entries.sort(
