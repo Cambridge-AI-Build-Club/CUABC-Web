@@ -12,4 +12,6 @@ Whether you’d like to:
 - Build and showcase your own demo  
 - Or simply learn more about what we do  
 
-…please reach out and we’ll be happy to help.  
+…please reach out and we’ll be happy to help.
+
+For committee and recruitment questions, email Andrew Choi at [jc2409@cam.ac.uk](mailto:jc2409@cam.ac.uk) or Zihao Liu at [zl600@cam.ac.uk](mailto:zl600@cam.ac.uk).  
