@@ -40,4 +40,4 @@ Sign in with your Cambridge account. You’ll need a short CV, ideally one page 
 
 If you aren’t selected, you’re still very welcome to join a project team or come along to our sessions.
 
-Any questions? Email Andrew Choi at jc2409@cam.ac.uk or Zihao Liu at zl600@cam.ac.uk.
+Any questions? Email Andrew Choi at [jc2409@cam.ac.uk](mailto:jc2409@cam.ac.uk) or Zihao Liu at [zl600@cam.ac.uk](mailto:zl600@cam.ac.uk).
