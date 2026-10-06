@@ -11,12 +11,15 @@ main:
   - name: "Team"
     url: "/team/"
     weight: 5
+  - name: "Committees"
+    url: "/committees/"
+    weight: 6
   - name: "About"
     url: "/about/"
-    weight: 6
+    weight: 7
   - name: "Contact"
     url: "/contact/"
-    weight: 7
+    weight: 8
 
 footer:
   - name: "Home"
