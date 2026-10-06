@@ -7,13 +7,13 @@ Deliver an overall design proposal and a working Next.js playground for review. 
 - Discovery and current architecture verification: complete.
 - Design brief and review criteria: complete.
 - Generated concept artwork and interactive template: complete.
-- Build, desktop/mobile visual QA, pull request and local preview: in_progress.
+- Build, desktop/mobile visual QA, pull request and local preview: complete.
 - Reviewer selects and approves direction: pending (user checkpoint).
 - Detailed route/content/asset migration plan: pending (after approval).
 - Final imagery and production migration: pending (after approval).
 
 ## Next Step
-Finish interaction QA and submit the branch PR; present the running local preview for direction approval.
+Await the user's review of http://localhost:4102/playground/ and Draft PR #15. After direction approval, prepare the detailed migration plan before the production rollout.
 
 ## Decisions
 - Reuse the existing Next.js 15 static-export implementation; this is a design migration.

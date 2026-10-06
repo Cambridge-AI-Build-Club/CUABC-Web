@@ -19,3 +19,8 @@
 - axe-core found no automatic A/AA violations; decorative contrast regions received manual visual and numerical review (all reviewed text pairs exceed 7:1).
 - Internal destination, hero asset and legacy redirect HTTP checks passed. Preview process remains running.
 - Final Community accessibility scan: zero violations and zero incomplete checks. Home/Explore/control decorative contrast cases are recorded with manual inspection evidence in docs/design/playground-qa.md.
+- Committed and pushed the implementation on codex/design-playground; verified the remote matches implementation commit 9fc0987.
+- Opened and attached Draft PR #15: https://github.com/Cambridge-AI-Build-Club/Cambridge-AI-Build-Club.github.io/pull/15.
+- The PR remains open and unmerged. GitHub's build check is tracked on the PR; no production deployment was initiated.
+- Delivered the local preview URL and opened it in a Codex browser panel (the app reported queued).
+- The current design proposal/template deliverable is complete. The user's approval is the next checkpoint before detailed migration planning.
