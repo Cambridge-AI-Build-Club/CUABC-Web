@@ -46,7 +46,16 @@ function resolveFile(urlPath) {
 }
 
 createServer((req, res) => {
-  const path = decodeURIComponent(new URL(req.url, 'http://x').pathname)
+  // A malformed request line (e.g. "GET //", which new URL rejects) or a bad %
+  // escape must answer 400, not crash the server via an uncaught exception.
+  let path
+  try {
+    path = decodeURIComponent(new URL(req.url, 'http://x').pathname)
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'text/plain' })
+    res.end('Bad request')
+    return
+  }
   const file = resolveFile(path)
   if (!file) {
     res.writeHead(404, { 'Content-Type': 'text/plain' })
