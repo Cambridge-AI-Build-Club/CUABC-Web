@@ -26,7 +26,7 @@ You’ll need hands-on coding experience, but not a CS degree.
 
 ## How to apply
 
-**[Apply here: Join the Committee 2026–27](PASTE_COMMITTEE_APPLICATION_FORM_URL_HERE)**
+**[Apply here: Join the Committee 2026–27](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=RQSlSfq9eUut41R7TzmG6ViLfiycMl5Phrl2grRDcjlUMklYVlRFVFJVMEY0WFAxOUpLTUtQM0I2SC4u)**
 
 Sign in with your Cambridge account. You’ll need a short CV, ideally one page as a PDF.
 
