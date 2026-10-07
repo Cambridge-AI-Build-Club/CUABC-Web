@@ -1,5 +1,8 @@
 # Repository Guidelines
 
+## Design contract
+Read `DESIGN.md` before any UI/UX, layout, icon, motion, navigation or visual-asset change. Update its affected rules and dated change record **first**, before editing the implementation. After verification, update the same record with actual checks and limitations. Include the contract with design changes. All UI icons must use the shared Morphicons component; `npm run check:design` rejects text/emoji pictograms, custom UI SVGs and competing icon imports.
+
 ## Workflow
 **All changes go through a branch + pull request.** Never push directly to `main`: create a dedicated branch for every piece of work (code, content, or documentation), open a pull request into `main`, let the build check pass, and merge (squash). All recorded work — commit messages, PR titles and descriptions, documentation, and code comments — is written in **English**. Local design exploration is exempt from PR preparation when the user requests that workflow; publishing still follows the branch/review process.
 

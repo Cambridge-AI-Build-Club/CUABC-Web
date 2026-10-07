@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import type { CalendarEvent } from '@/lib/calendar'
+import { Icon } from '@/components/Icon'
 
 const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
@@ -30,13 +31,12 @@ export function CalendarApp({ events }: { events: CalendarEvent[] }) {
   }
 
   return <>
-    <div className="site-calendar-meta"><p className="lab-kicker">{events.length} SESSIONS / {monthEvents.length} THIS MONTH</p><span className="site-status">Club calendar</span></div>
     <div className="site-calendar-layout">
       <div className="site-calendar">
         <div className="site-month-controls">
-          <button aria-label="Previous month" disabled={monthIndex === 0} onClick={() => changeMonth(monthIndex - 1)}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg></button>
+          <button aria-label="Previous month" disabled={monthIndex === 0} onClick={() => changeMonth(monthIndex - 1)}><Icon name="chevron-left" hoverName="arrow-left" size={20} /></button>
           <h2 aria-live="polite">{monthName}</h2>
-          <button aria-label="Next month" disabled={monthIndex === months.length - 1} onClick={() => changeMonth(monthIndex + 1)}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg></button>
+          <button aria-label="Next month" disabled={monthIndex === months.length - 1} onClick={() => changeMonth(monthIndex + 1)}><Icon name="chevron-right" hoverName="arrow-right" size={20} /></button>
         </div>
         <div className="site-calendar-dates" role="region" aria-label="Calendar dates" tabIndex={0}>
           <div className="site-weekdays" aria-hidden="true">{weekdays.map((day) => <span key={day}>{day}</span>)}</div>

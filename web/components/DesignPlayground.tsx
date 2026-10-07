@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { Arrow, Icon } from '@/components/Icon'
 
 export interface PlaygroundData {
   copy: {
@@ -26,10 +27,6 @@ export interface PlaygroundData {
 
 type View = 'home' | 'explore' | 'community'
 type Surface = 'paper' | 'charcoal'
-
-function Arrow() {
-  return <span aria-hidden="true">↗</span>
-}
 
 export function DesignPlayground({ data }: { data: PlaygroundData }) {
   const [view, setView] = useState<View>('home')
@@ -135,7 +132,7 @@ export function DesignPlayground({ data }: { data: PlaygroundData }) {
       <a className="lab-skip" href="#lab-main">Skip to content</a>
       <div className="lab-review-bar">
         <span><i aria-hidden="true" /> DESIGN PLAYGROUND <span className="lab-review-sub">/ CLAUDE EDITION</span></span>
-        <button ref={controlsButton} aria-expanded={controlsOpen} aria-controls="lab-controls" onClick={() => setControlsOpen(!controlsOpen)}>Design controls <span aria-hidden="true">{controlsOpen ? '−' : '+'}</span></button>
+        <button ref={controlsButton} aria-expanded={controlsOpen} aria-controls="lab-controls" onClick={() => setControlsOpen(!controlsOpen)}>Design controls <Icon name={controlsOpen ? 'minus' : 'plus'} /></button>
       </div>
 
       <header className="lab-header">
@@ -145,12 +142,12 @@ export function DesignPlayground({ data }: { data: PlaygroundData }) {
             <img src={data.logo.desktop} alt="Cambridge AI Builder Club" width={600} height={600} />
           </picture>
         </a>
-        <button className="lab-menu-toggle" ref={menuButton} aria-expanded={menuOpen} aria-controls="lab-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'} <span aria-hidden="true">{menuOpen ? '×' : '+'}</span></button>
+        <button className="lab-menu-toggle" ref={menuButton} aria-expanded={menuOpen} aria-controls="lab-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'} <Icon name={menuOpen ? 'close' : 'menu'} size={20} /></button>
         <nav id="lab-navigation" className={menuOpen ? 'is-open' : ''} aria-label="Concept navigation">
           <button aria-current={view === 'explore' ? 'page' : undefined} onClick={() => showView('explore')}>Explore</button>
           <a href={data.links.calendar}>Calendar</a>
           <button aria-current={view === 'community' ? 'page' : undefined} onClick={() => showView('community')}>Community</button>
-          <a href={data.links.journal}>Journal <span aria-hidden="true">↗</span></a>
+          <a href={data.links.journal}>Journal <Arrow /></a>
           <a className="lab-button lab-button-small" href={data.signup} target="_blank" rel="noopener noreferrer">Join the club <Arrow /></a>
         </nav>
       </header>
@@ -171,7 +168,7 @@ export function DesignPlayground({ data }: { data: PlaygroundData }) {
               </div>
               <div className="lab-hero-visual">
                 <img src={data.hero} alt="" width={1080} height={1080} fetchPriority="high" />
-                <div className="lab-art-tag"><span>CAMBRIDGE / BUILDERS AT WORK<br /><small>CURIOUS MINDS. PRACTICAL IDEAS.</small></span></div>
+                <div className="lab-art-tag"><span>CAMBRIDGE / BUILDERS AT WORK</span></div>
                 <span className="lab-art-index" aria-hidden="true">CAMBRIDGE, UK</span>
               </div>
             </section>
@@ -193,7 +190,7 @@ export function DesignPlayground({ data }: { data: PlaygroundData }) {
           <>
             <section className="lab-page-intro">
               <p className="lab-kicker">COMMUNITY / BETTER TOGETHER</p>
-              <h1 ref={mainHeading} tabIndex={-1}>Good ideas need<br /><span className="accent">good company.</span></h1>
+              <h1 ref={mainHeading} tabIndex={-1}>Good ideas need<br /><span className="accent">good community.</span></h1>
               <p className="lab-intro">A student-led community for exploring AI’s creative and practical possibilities. Bring a question. Meet a collaborator.</p>
               <a className="lab-button" href={data.discord} target="_blank" rel="noopener noreferrer">Join our Discord <Arrow /></a>
             </section>
@@ -228,7 +225,7 @@ export function DesignPlayground({ data }: { data: PlaygroundData }) {
 
       {controlsOpen && (
         <aside id="lab-controls" className="lab-controls" aria-label="Design review controls">
-          <div className="lab-controls-heading"><span className="lab-kicker">LOCAL REVIEW / CLAUDE EDITION</span><button aria-label="Close design controls" onClick={() => { setControlsOpen(false); controlsButton.current?.focus() }}>×</button></div>
+          <div className="lab-controls-heading"><span className="lab-kicker">LOCAL REVIEW / CLAUDE EDITION</span><button aria-label="Close design controls" onClick={() => { setControlsOpen(false); controlsButton.current?.focus() }}><Icon name="close" size={20} /></button></div>
           <h2>One brand. Two moods.</h2>
           <p>Official Claude colors, with a choice of warm or dark surfaces.</p>
           <fieldset><legend>Page surface</legend><div className="lab-view-options">{(['paper', 'charcoal'] as const).map((mode) => <button key={mode} aria-pressed={surface === mode} onClick={() => setSurface(mode)}>{mode === 'paper' ? 'Warm paper' : 'Charcoal'}</button>)}</div></fieldset>

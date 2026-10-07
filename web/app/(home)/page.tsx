@@ -21,7 +21,7 @@ export default function HomePage() {
           <div className="lab-hero-actions"><a className="lab-button" href={site.signup} target="_blank" rel="noopener noreferrer">Find your people <Arrow /></a><a className="lab-text-link" href={url('/events/')}>See what we do <Arrow /></a></div>
           <p className="lab-hero-note">Curiosity is the only prerequisite.</p>
         </div>
-        <div className="lab-hero-visual"><img src={url(String(page.intro_image))} alt="" width={1080} height={1080} fetchPriority="high" /><div className="lab-art-tag">CAMBRIDGE / BUILDERS AT WORK<br /><small>CURIOUS MINDS. PRACTICAL IDEAS.</small></div><span className="lab-art-index" aria-hidden="true">CAMBRIDGE, UK</span></div>
+        <div className="lab-hero-visual"><img src={url(String(page.intro_image))} alt="" width={1080} height={1080} fetchPriority="high" /><div className="lab-art-tag">CAMBRIDGE / BUILDERS AT WORK</div><span className="lab-art-index" aria-hidden="true">CAMBRIDGE, UK</span></div>
       </section>
       <div className="lab-manifesto" role="group" aria-label="Claude collaboration"><span>IN COLLABORATION WITH</span><a href="https://claude.com/" target="_blank" rel="noopener noreferrer"><img src={url('/images/brand/claude-official.svg')} alt="Claude" width={143} height={31} /></a><span>HUMAN CURIOSITY. REAL POSSIBILITIES.</span></div>
       <section className="lab-section" aria-labelledby="activities-heading"><div className="lab-section-head"><div><p className="lab-kicker">01 / LEARN. MAKE. SHARE.</p><h2 id="activities-heading">Find your starting point<span className="accent">.</span></h2></div><a className="lab-text-link" href={url('/events/')}>Explore the club <Arrow /></a></div><ActivityGrid activities={loadActivities()} /></section>

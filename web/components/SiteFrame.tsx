@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { Arrow, Icon } from '@/components/Icon'
 
 interface SiteData {
   title: string
@@ -50,15 +51,15 @@ export function SiteFrame({ data, path, children }: { data: SiteData; path: stri
         </a>
         <div className="site-header-actions">
           <button className="site-theme" onClick={toggleSurface} aria-pressed={surface === 'charcoal'} aria-label="Dark appearance">
-            <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="8" /><path d="M12 4a8 8 0 0 1 0 16V4Z" fill="currentColor" /></svg>
+            <Icon name={surface === 'charcoal' ? 'moon' : 'sun'} size={20} />
           </button>
-          <button ref={menuButton} className="lab-menu-toggle" aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'} <span aria-hidden="true">{menuOpen ? '×' : '+'}</span></button>
+          <button ref={menuButton} className="lab-menu-toggle" aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'} <Icon name={menuOpen ? 'close' : 'menu'} size={20} /></button>
         </div>
         <nav id="site-navigation" className={menuOpen ? 'is-open' : ''} aria-label="Main navigation">
           {data.navigation.map((item) => (
             <a key={item.href} href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>{item.name}</a>
           ))}
-          <a className="lab-button lab-button-small" href={data.signup} target="_blank" rel="noopener noreferrer">Join the club <span aria-hidden="true">↗</span></a>
+          <a className="lab-button lab-button-small" href={data.signup} target="_blank" rel="noopener noreferrer">Join the club <Arrow /></a>
         </nav>
       </header>
       <main id="site-main" tabIndex={-1}>{children}</main>
@@ -67,7 +68,7 @@ export function SiteFrame({ data, path, children }: { data: SiteData; path: stri
         <nav aria-label="Footer navigation">
           <a href={data.links.committees}>Join the committee</a><a href={data.links.calendar}>Calendar</a>
           <a href={data.links.about}>About</a><a href={data.links.contact}>Contact</a>
-          <a href={`mailto:${data.email}`}>Email us <span aria-hidden="true">↗</span></a>
+          <a href={`mailto:${data.email}`}>Email us <Arrow /></a>
         </nav>
       </footer>
     </div>
