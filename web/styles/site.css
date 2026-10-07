@@ -24,7 +24,7 @@
 .site .lab-page-intro .lab-intro { max-width: 590px; }
 .site-article-title { display: block; font-size: clamp(40px, 4.5vw, 64px); line-height: 1.12; }
 .site-article-wrap { max-width: 1256px; margin: 0 auto; padding: 40px 36px 90px; }
-.site-back { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; margin-bottom: 24px; color: var(--muted) !important; }
+.site-back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13px; margin-bottom: 24px; color: var(--muted) !important; }
 .site-back:hover { text-decoration: underline; }
 .site-prose { font-size: 17px; line-height: 1.85; max-width: 740px; overflow-wrap: anywhere; }
 .site .site-prose > * + * { margin-top: 22px; }
@@ -57,7 +57,6 @@
 .site-application-note > p:not(.lab-kicker) { font-size: 13px; color: var(--muted); line-height: 1.8; margin-top: 20px; }
 .site-application-note .lab-button { margin-top: 24px; width: 100%; font-size: 12px; }
 .site-calendar-section { padding-top: 40px; }
-.site-calendar-meta { display: flex; align-items: center; gap: 20px; justify-content: space-between; margin-bottom: 24px; color: var(--muted); }
 .site-status { display: inline-flex; align-items: center; border: 1px solid var(--line); padding: 6px 10px; font-size: 11px; text-transform: capitalize; white-space: nowrap; color: var(--text); }
 .site-calendar-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 24px; align-items: start; }
 .site-calendar { border: 1px solid var(--line); background: var(--panel); padding: 22px; }
@@ -120,7 +119,6 @@
   .site .site-prose h2 { font-size: 29px; }
   .site-profile { grid-template-columns: minmax(0, 1fr); }
   .site-profile > img { height: 360px; max-width: 440px; }
-  .site-calendar-meta { flex-wrap: wrap; gap: 12px; }
   .site-calendar { padding: 12px; }
   .site-month-controls { gap: 6px; }
   .site-month-controls h2 { font-size: 25px; }
@@ -133,3 +131,6 @@
   .site-month-list button > span:not(.site-status) { width: calc(100% - 60px); }
   .site-month-list .site-status { margin-left: 60px; }
 }
+
+.site-footer nav a { gap: 6px; }
+.site-chips a { display: inline-flex; align-items: center; gap: 6px; }

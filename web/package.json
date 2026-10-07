@@ -7,12 +7,15 @@
     "sync": "node scripts/sync-assets.mjs",
     "predev": "node scripts/sync-assets.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/sync-assets.mjs",
-    "build": "next build && node scripts/gen-redirects.mjs"
+    "prebuild": "npm run check:design && node scripts/sync-assets.mjs",
+    "build": "next build && node scripts/gen-redirects.mjs",
+    "check:design": "node scripts/check-design.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "lucide": "1.52.0",
     "marked": "^18.0.14",
+    "morphicons": "1.7.1",
     "next": "^15.5.27",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",

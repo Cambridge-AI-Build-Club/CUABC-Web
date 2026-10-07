@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Icon } from '@/components/Icon'
 import { Shell } from '@/components/Shell'
 import { PageMeta } from '@/components/PageMeta'
 import { JoinSection, PageIntro } from '@/components/SiteSections'
@@ -14,7 +15,7 @@ export function ArticlePage({ title, description, path, eyebrow, body, back, chi
     <Shell path={path}>
       <PageIntro eyebrow={eyebrow} title={<span className="site-article-title">{title}</span>} description={description} />
       <div className="site-article-wrap">
-        {back && <a className="site-back" href={url(back.href)}>← {back.label}</a>}
+        {back && <a className="site-back" href={url(back.href)}><Icon name="arrow-left" hoverName="chevron-left" />{back.label}</a>}
         <article className="site-prose"><Markdown>{body}</Markdown>{children}</article>
       </div>
       <JoinSection />

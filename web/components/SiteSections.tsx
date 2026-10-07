@@ -2,7 +2,9 @@ import type { ReactNode } from 'react'
 import { loadHomeCopy, loadRecruitment, loadSiteData, loadVisibleMembers } from '@/lib/site'
 import { url } from '@/lib/content'
 
-export function Arrow() { return <span aria-hidden="true">↗</span> }
+import { Arrow } from '@/components/Icon'
+
+export { Arrow } from '@/components/Icon'
 
 export function PageIntro({ eyebrow, title, description, children }: { eyebrow: string; title: ReactNode; description?: string; children?: ReactNode }) {
   return <section className="lab-page-intro"><p className="lab-kicker">{eyebrow}</p><h1>{title}</h1>{description && <p className="lab-intro">{description}</p>}{children}</section>

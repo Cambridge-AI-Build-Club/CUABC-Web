@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Arrow } from '@/components/Icon'
 
 interface Activity { title: string; description: string; href: string; image?: string }
 
@@ -20,8 +21,8 @@ export function ActivityGrid({ activities, filterable = false }: { activities: A
           </div>
           <div className="lab-activity-copy">
             <span className="lab-kicker">{String(activities.indexOf(item) + 1).padStart(2, '0')} / {item.title === 'Workshop' ? 'GET HANDS-ON' : item.title === 'Demo' ? 'SHOW WHAT’S POSSIBLE' : 'BUILD TOGETHER'}</span>
-            <h3>{item.title}<span aria-hidden="true">↗</span></h3><p>{item.description}</p>
-            <span className="lab-card-link">Discover {item.title.toLowerCase()}s <span aria-hidden="true">↗</span></span>
+            <h3>{item.title}<Arrow /></h3><p>{item.description}</p>
+            <span className="lab-card-link">Discover {item.title.toLowerCase()}s <Arrow /></span>
           </div>
         </a>)}
         {!visible.length && <p>No activities match this filter. Choose another category.</p>}
