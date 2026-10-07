@@ -1,8 +1,8 @@
 # CUABC-Web — Next.js rebuild (`web/`)
 
-This directory contains the Next.js rebuild of the club's Jekyll site. It lives in a
-subdirectory so that the Jekyll site at the repository root keeps building unchanged
-until the migration is cut over — that is the rollback guarantee.
+This directory contains the club's Next.js static website. The Claude design migration
+uses shared templates and local styles, while root content and the original Jekyll
+templates remain available for the legacy rollback build.
 
 ## Architecture
 
@@ -11,9 +11,11 @@ until the migration is cut over — that is the rollback guarantee.
 - **Content is not duplicated.** At build time, pages read the Jekyll sources in place:
   `_config.yml`, `_data/*`, `_events/`, `_blogs/`, `_team/`, and the root `*.md` pages.
   Editing content in the Jekyll files updates both builds.
-- **Styles are not duplicated.** `styles/globals.scss` mirrors `assets/css/style.scss`
-  (same variables, same `@import` order) and the partials resolve against the
-  repository-root `_sass/` via `sassOptions.includePaths` in `next.config.mjs`.
+- **Design styles.** `styles/claude.css` contains the approved shared visual system;
+  `styles/site.css` covers production navigation, prose, profiles and calendar.
+  `components/SiteDocument.tsx` loads both. The playground imports the same base CSS.
+  The untouched `styles/globals.scss` and `assets/css/style.scss` mirrors support
+  the legacy Jekyll design; production templates no longer import them.
 - **Images** are copied from the repository-root `images/` into `web/public/images/` by
   `scripts/sync-assets.mjs` (runs automatically before `dev`/`build`; the copy is
   gitignored).
@@ -71,20 +73,33 @@ and cleaned up once the site was live:
   (`_data/seo.yml`), replacing the theme attribution.
 - Added `sitemap.xml` and `robots.txt` (the Jekyll site had none).
 
+## Claude design migration
+
+The original parity migration table above is historical. On 6 October 2026 the owner
+approved the Claude design direction and authorized migration of all production routes.
+See [migration plan](../docs/design/migration-plan.md) for route, content and asset scope.
+
+- Production shell: `SiteFrame`, server content wrapper `Shell`, shared `SiteSections`
+  and `ArticlePage`; obsolete Next.js theme components were removed.
+- Root `index.md` owns approved homepage copy. Root menus, collection records and
+  committee front matter supply navigation, cards, roles and recruitment details.
+- `ActivityGrid` provides the activity filters. The three new decorative SVGs live
+  in `images/features/`; club logos, portraits and official Claude artwork are reused.
+- The warm/dark appearance switch stores an optional local browser preference.
+- Canonical URLs, sitemap, static metadata routes and legacy redirects remain available.
+
 ## Calendar page notes
 
-- The Tailwind **Play CDN** (`cdn.tailwindcss.com` + inline config with the `tw-`
-  prefix) is kept exactly as in `_layouts/calendar.html`, so the calendar styles are
-  generated at runtime client-side, identically to the Jekyll site. Replacing it with
-  a locally built Tailwind setup (or porting the classes to the site's SCSS) is a
-  possible future cleanup.
-- The 14-event array, the "Cancelded" typo, and the brandfetch hot-linked logos are
-  verbatim ports.
-- Unlike Jekyll (which ships an empty grid and fills it with JS after load), the React
-  page renders the initialised state (February 2026, first event selected) directly
-  into the static HTML. The visible result and all interactions are identical; the
-  "today" highlight is computed by the browser at hydration, matching Jekyll's
-  runtime behaviour.
+- Calendar is a primary navigation page for the ongoing club programme. Add future
+  sessions to `_data/calendar.json`; existing dates and month controls are unchanged.
+
+- `_data/calendar.json` is the build-time source for all 14 existing session records. Dates,
+  times, venues and types are preserved; cancellation is an explicit status.
+- The calendar renders February 2026 with a matching selected event, supports all
+  three currently populated months and uses UTC date formatting to avoid day shifts.
+- CSS is local, with no Tailwind Play CDN, remote logo or font dependency.
+- The original Jekyll calendar remains frozen in `_layouts/calendar.html` for rollback.
+  Editing the new JSON changes the Next.js calendar; it does not update that legacy script.
 
 ## Rollback / cutover
 

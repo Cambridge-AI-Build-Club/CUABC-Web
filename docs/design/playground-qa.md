@@ -1,41 +1,39 @@
-# Design playground verification
+# Claude design playground verification
 
-Reviewed locally on 6 October 2026, on `codex/design-playground`.
+Reviewed locally on 6 October 2026, on `codex/design-playground`. This record and the screenshots supersede the initial acid-green concept review.
 
 ## Build and source integrity
 
-- `npm run build`: passed with Next.js 15.5.27, including TypeScript validation, 24 static pages and 20 legacy redirect stubs.
-- The system Node proxy had no active version. Used the already installed Node 24.19.0 runtime without changing global configuration. The PR check uses the repository's Node 20 configuration.
-- Added an isolated `/playground/` root layout and CSS. Existing production templates, source collection entries, Sass mirrors and deployment workflows are untouched.
-- Playground metadata requests no indexing and the route is absent from the production sitemap.
-- Event descriptions, visible member data, signup and Discord links load from the existing root sources.
-- Hidden member records remain hidden. No new upcoming events or sponsor claims were introduced.
-- `git diff --check`: passed.
+- `npm run build`: passed with Next.js 15.5.27, TypeScript validation, 24 static pages and 20 legacy redirect stubs.
+- Used the installed Node 24.19.0 runtime because the system proxy has no active version; global configuration was unchanged.
+- Existing production templates, root collection entries, Sass mirrors and deployment workflows remain untouched.
+- Playground metadata requests no indexing; the route is absent from the production sitemap.
+- Event descriptions, member visibility, signup and Discord links load from existing root sources.
+- Existing club logos, illustration, activity icons and portraits are reused without file changes. No new images were generated in this revision.
+- Official palette and authentic Claude SVG provenance are recorded in [brand sources](claude-brand-sources.md).
 
 ## Browser checks
 
-- Fresh screenshot inspection: Home, Explore and Community at 1440px desktop and 375px mobile; mobile navigation and design controls also inspected.
-- Document scroll width equals viewport width at 1440px and 375px. Images load successfully.
-- Acid, Ice and Ember switches update the accent and artwork tint.
-- Pause switches motion off. With the browser's reduced-motion preference enabled, computed hero animation is `none`.
-- Explore filtering gives 3 cards, 1 Workshop card, then 3 cards when cleared.
-- Returning to Home after filtering still shows all 3 cards. Browser Back restores the Explore view and selected filter.
-- Mobile menu opens, closes with Escape, restores focus to its toggle and closes after navigation.
-- Review controls close with Escape and restore focus to their toggle.
-- All tested internal detail/utility pages, the generated hero asset and a legacy redirect return HTTP 200.
+- Fresh Home screenshots visually inspected at 1440px desktop and 375px mobile, including the Charcoal alternative. Mobile Explore, Community and review controls also inspected.
+- Document scroll width equals viewport width at 1440px and 375px; all checked images load.
+- Warm Paper and Charcoal change the surfaces while the official orange accent stays `#D97757`. Images and logos retain their original colors.
+- Activity filtering gives 3 cards, 1 Workshop card, then 3 when cleared.
+- Mobile menu opens, closes with Escape, restores focus to its toggle and closes after navigation. Review controls close with Escape and restore focus.
 - Browser error log is empty.
-- axe-core 4.12.1 found zero automatic WCAG A/AA violations on Home, Explore and the controls panel. It flagged contrast regions over decorative layers for manual review; visual inspection and explicit foreground/background calculations gave contrast ratios above 7:1 for those text pairs. This is a targeted prototype check, not a full accessibility certification.
+- axe-core 4.12.1: zero automatic WCAG A/AA violations on the reviewed Home, Explore and Community views and review controls. Closed Home views and the reviewed Explore/Community views had no incomplete findings.
+- The open controls panel required manual contrast review for its decorative minus symbol and secondary copy. Screenshot inspection found no obscuring layers; `#141413` on `#E8E6DC` and `#5F5E57` on `#FAF9F5` have contrast ratios above 6:1. This is a targeted prototype check, not a full accessibility audit.
+- Prior unchanged interaction checks covered reduced-motion handling, motion pause, history navigation and filter isolation.
 
-## Review limitations
+## Review boundary
 
-- Journal, activity details, About, Contact, committee details and calendar still use the current production design.
+- Journal, activity details, About, Contact, committees and calendar still use the current production design.
 - Signup and Discord use the configured external destinations; no form was submitted and no account was joined.
-- The dated calendar programme is an archive. Detailed shared event data and future scheduling belong in the migration plan after approval.
-- The artwork is generated concept art. Final assets, fonts and mobile crops will be scoped after the direction is approved.
-- The local preview server is kept running at `http://localhost:4102/playground/`. No merge or production deploy is authorized at this checkpoint.
+- The January-March 2026 calendar is an archive. Shared event data and future scheduling belong in the later migration plan.
+- The user instructed local design iterations without PR preparation. Draft PR #15 was closed and detached. This revision is local, uncommitted and unpushed; no merge or production deploy occurred.
+- Preview server remains running at `http://localhost:4102/playground/`. The next checkpoint is the user's design review.
 
 ## Screenshots
 
-![Desktop Home concept](playground-desktop.jpg)
+![Claude desktop concept](playground-desktop.jpg)
 
-![Mobile Home concept](playground-mobile.jpg)
+![Claude mobile concept](playground-mobile.jpg)

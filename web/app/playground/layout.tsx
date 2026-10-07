@@ -3,8 +3,8 @@ import type { ReactNode } from 'react'
 import './playground.css'
 
 export const metadata: Metadata = {
-  title: 'Builder Lab | Cambridge AI Builders Club design playground',
-  description: 'An interactive design concept for the Cambridge AI Builders Club.',
+  title: 'Cambridge AI Builder Club | Design playground',
+  description: 'An interactive Claude-branded design concept for the Cambridge builder community.',
   robots: { index: false, follow: false },
 }
 

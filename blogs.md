@@ -1,12 +1,8 @@
 ---
-title: Blogs 
+title: Journal
 layout: blogs
 description: Blogs
 ---
 
-# Our Blog  
-
-Here, you’ll find updates, highlights, and reflections from our past events and activities.  
-From workshops and hackathons to community initiatives, our blog captures the journey of the Cambridge AI Builders Club and celebrates the creativity of our members.  
-Stay tuned for stories, insights, and news about how our community is shaping the future of AI at Cambridge.  
+Updates, ideas and reflections from the Cambridge AI Builder Club. Follow the things we learn and build together.
 

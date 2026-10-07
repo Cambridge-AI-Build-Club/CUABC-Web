@@ -1,182 +1,34 @@
-// Port of _layouts/home.html rendering index.md.
 import { PageMeta } from '@/components/PageMeta'
 import { Shell } from '@/components/Shell'
-import { SignupCard } from '@/components/SignupCard'
-import { DiscordCard } from '@/components/DiscordCard'
-import { Markdown } from '@/lib/markdown'
-import {
-  firstParagraph,
-  loadConfig,
-  loadCollection,
-  loadFeatures,
-  loadPage,
-  markdownifyStrip,
-  markdownifyStripTruncate,
-  url,
-  type CollectionEntry,
-  type FeatureItem,
-} from '@/lib/content'
-
-// Card markup for the blogs strip of home.html.
-function Card({ entry, kind }: { entry: CollectionEntry; kind: 'blog' }) {
-  return (
-    <div className="col-12 col-md-4 mb-1">
-      <div className={`${kind} ${kind}-summary`}>
-        <div className={`${kind}-content`}>
-          <h2 className={`${kind}-title`}>
-            <a href={url(`blogs/${entry.slug}/`)}>{String(entry.title)}</a>
-          </h2>
-          <p>{markdownifyStripTruncate(firstParagraph(entry.body), 100)}</p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-// "Demos" -> "demo", "Workshops" -> "workshop": pairs feature cards with their
-// matching events when merging the two homepage sections.
-function normalizeTitle(title: string) {
-  return title.toLowerCase().replace(/s$/, '')
-}
-
-interface MergedEntry {
-  feature?: FeatureItem
-  event?: CollectionEntry
-}
-
-// One card per activity, merging the two former homepage sections: the feature card's
-// logo plus the event's linked title and single merged description. Entries without a
-// counterpart on the other side are still rendered.
-function MergedCard({ feature, event }: MergedEntry) {
-  return (
-    <div className="col-12 col-md-6 col-lg-4 mb-2">
-      <div className="feature">
-        {feature?.image && (
-          <div className="feature-image">
-            <img
-              alt={`${feature.title} logo`}
-              src={url(feature.image.url)}
-              width={feature.image.width}
-              height={feature.image.height}
-            />
-          </div>
-        )}
-        <h2 className="feature-title">
-          {event ? (
-            <a href={url(`events/${event.slug}/`)}>{String(event.title)}</a>
-          ) : (
-            String(feature?.title ?? '')
-          )}
-        </h2>
-        {event && (
-          <div className="feature-content">
-            <p>{markdownifyStrip(firstParagraph(event.body))}</p>
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
+import { ActivityGrid } from '@/components/ActivityGrid'
+import { Arrow, JoinSection, Recruitment, Welcome } from '@/components/SiteSections'
+import { firstParagraph, loadCollection, loadPage, markdownifyStrip, url } from '@/lib/content'
+import { formatPublicationDate, loadActivities, loadHomeCopy, loadSiteData } from '@/lib/site'
 
 export default function HomePage() {
-  const config = loadConfig()
   const page = loadPage('index.md')
-
-  // {{ site.home.limit_services | default: 6 }}
-  const limit = config.home?.limit_services || 6
-  const events = loadCollection('_events', 'weight').slice(0, limit)
-  const blogs = loadCollection('_blogs', 'weight').slice(0, limit)
-
-  // Merge the feature cards (logo + description) with their events (linked title +
-  // excerpt) by normalized title; events without a feature card are kept too.
-  const features = loadFeatures()
-  const eventByTitle = new Map(
-    events.map((event) => [normalizeTitle(String(event.title)), event] as const),
-  )
-  const featureTitles = new Set(features.map((feature) => normalizeTitle(feature.title)))
-  const merged: MergedEntry[] = [
-    ...features.map((feature) => ({
-      feature,
-      event: eventByTitle.get(normalizeTitle(feature.title)),
-    })),
-    ...events
-      .filter((event) => !featureTitles.has(normalizeTitle(String(event.title))))
-      .map((event) => ({ event })),
-  ]
-
-  const title = page.title ?? config.title
-  const description = page.description
-
-  const introImage = page.intro_image ? String(page.intro_image) : undefined
-  const introImageClass = [
-    'intro-image',
-    page.intro_image_absolute ? 'intro-image-absolute' : '',
-    page.intro_image_hide_on_mobile ? 'intro-image-hide-mobile' : '',
-  ]
-    .filter(Boolean)
-    .join(' ')
-
-  return (
-    <>
-      <PageMeta title={title} description={description} path="/" />
-      <Shell path="/">
-        <div className="intro">
-          <div className="container">
-            <div className="row justify-content-start">
-              <div className="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-                <Markdown>{page.body}</Markdown>
-                <SignupCard showButton />
-                <DiscordCard showButton />
-              </div>
-              {introImage && (
-                <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                  <img alt={title} className={introImageClass} src={url(introImage)} />
-                </div>
-              )}
-            </div>
-          </div>
+  const copy = loadHomeCopy()
+  const site = loadSiteData()
+  const blogs = loadCollection('_blogs', 'weight').slice(0, 3)
+  return <>
+    <PageMeta title={site.title} description={page.description} path="/" />
+    <Shell path="/">
+      <section className="lab-hero">
+        <div className="lab-hero-copy">
+          <p className="lab-kicker"><span className="lab-status-dot" />{copy.eyebrow}</p>
+          <h1>{copy.headline[0]}<br /><span className="accent">{copy.headline[1]}</span></h1>
+          <p className="lab-intro">{copy.intro}</p>
+          <div className="lab-hero-actions"><a className="lab-button" href={site.signup} target="_blank" rel="noopener noreferrer">Find your people <Arrow /></a><a className="lab-text-link" href={url('/events/')}>See what we do <Arrow /></a></div>
+          <p className="lab-hero-note">Curiosity is the only prerequisite.</p>
         </div>
-
-        <div className="strip">
-          <div className="container pt-6 pb-6 pb-md-10">
-            <div className="topic">
-              <h1>Our Events</h1>
-            </div>
-            <div className="row justify-content-start">
-              {merged.map((entry, index) => (
-                <MergedCard key={index} feature={entry.feature} event={entry.event} />
-              ))}
-            </div>
-            <div className="row justify-content-center">
-              <div className="col-auto">
-                <a className="button button-primary" href={url('events')}>
-                  View All Events
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="strip">
-          <div className="container pt-6 pb-6 pb-md-10">
-            <div className="topic">
-              <h1>Our Blogs</h1>
-            </div>
-            <div className="row justify-content-start">
-              {blogs.map((blog) => (
-                <Card key={blog.slug} entry={blog} kind="blog" />
-              ))}
-            </div>
-            <div className="row justify-content-center">
-              <div className="col-auto">
-                <a className="button button-primary" href={url('blogs')}>
-                  View All Blogs
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Shell>
-    </>
-  )
+        <div className="lab-hero-visual"><img src={url(String(page.intro_image))} alt="" width={1080} height={1080} fetchPriority="high" /><div className="lab-art-tag">CAMBRIDGE / BUILDERS AT WORK<br /><small>CURIOUS MINDS. PRACTICAL IDEAS.</small></div><span className="lab-art-index" aria-hidden="true">CAMBRIDGE, UK</span></div>
+      </section>
+      <div className="lab-manifesto" role="group" aria-label="Claude collaboration"><span>IN COLLABORATION WITH</span><a href="https://claude.com/" target="_blank" rel="noopener noreferrer"><img src={url('/images/brand/claude-official.svg')} alt="Claude" width={143} height={31} /></a><span>HUMAN CURIOSITY. REAL POSSIBILITIES.</span></div>
+      <section className="lab-section" aria-labelledby="activities-heading"><div className="lab-section-head"><div><p className="lab-kicker">01 / LEARN. MAKE. SHARE.</p><h2 id="activities-heading">Find your starting point<span className="accent">.</span></h2></div><a className="lab-text-link" href={url('/events/')}>Explore the club <Arrow /></a></div><ActivityGrid activities={loadActivities()} /></section>
+      <Welcome />
+      <Recruitment />
+      {blogs.length > 0 && <section className="lab-section site-journal-section" aria-labelledby="journal-heading"><div className="lab-section-head"><div><p className="lab-kicker">02 / NOTES FROM THE CLUB</p><h2 id="journal-heading">Ideas worth sharing<span className="accent">.</span></h2></div><a className="lab-text-link" href={url('/blogs/')}>Read the journal <Arrow /></a></div><div className="site-journal-grid">{blogs.map((blog) => <a className="site-journal-card" href={url(`/blogs/${blog.slug}/`)} key={blog.slug}><p className="lab-kicker">{formatPublicationDate(blog.date)}</p><h3>{String(blog.title)} <Arrow /></h3><p>{markdownifyStrip(firstParagraph(blog.body)).replace(/^Building the Future: /, '')}</p><span className="lab-card-link">Read the story <Arrow /></span></a>)}</div></section>}
+      <JoinSection />
+    </Shell>
+  </>
 }

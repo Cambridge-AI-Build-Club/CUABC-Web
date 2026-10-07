@@ -1,6 +1,6 @@
-# Builder Lab: website design proposal
+# Cambridge Claude Builder Club: website design proposal
 
-Status: concept for review, 6 October 2026. No production rollout is approved.
+Status: revised local concept for review, 6 October 2026. The initial acid-green direction is superseded. No production rollout is approved.
 
 ## The outcome
 
@@ -8,14 +8,14 @@ Create a distinctive home for a student builder community: curious, experimental
 
 The repository already runs Next.js 15 static export. The next migration is from the inherited Jekyll presentation to a new design system. Keep the working hosting pipeline and source content while reviewing the direction.
 
-## Recommended direction: Builder Lab
+## Recommended direction: Claude Builder Studio
 
-- Charcoal canvas, warm white typography, acid-green accents, fine technical rules and restrained motion.
-- Large editorial headlines paired with small monospaced labels. Use available local/system fonts in the prototype; select self-hosted final fonts after approval.
-- A generated metallic sculpture supplies a memorable hero visual. It is abstract decorative art, never evidence of a real project or event.
+- Official Anthropic/Claude palette: terracotta orange `#D97757`, warm white `#FAF9F5`, charcoal `#141413` and light gray `#E8E6DC`. See [verified sources and asset inventory](claude-brand-sources.md).
+- Warm editorial headlines paired with small monospaced labels, orange offset frames and restrained motion. The prototype uses Georgia and Arial as local font choices, not a claim about official Claude typography.
+- Reuse the existing club illustration, desktop/mobile logos and activity icons without modifying their files. Display an authentic Claude wordmark obtained from the official website in a separate collaboration strip.
 - Use open layouts and clear section hierarchy. Activity cards can feel tactile; reading pages should remain calm and comfortable.
-- Give members real portraits and factual roles from the existing records. Do not generate people, attendance photos or partner logos.
-- Alternative accent palettes in the playground: Ice and Ember. These change interface accents and tint the concept artwork; they are not three separate design systems.
+- Give members real portraits and factual roles from the existing records. Partner logos always come from official publishers.
+- Playground alternatives: Warm paper and Charcoal surfaces. Both keep Claude's official orange accent fixed; neither tints any image or logo.
 
 ## Information architecture to test
 
@@ -31,9 +31,9 @@ Primary navigation in the concept: Explore, Community, Journal, plus persistent 
 
 ## Prototype scope
 
-The isolated `/playground/` route previews Home, Explore and Community as interactive views. It supports activity filters, member cards, mobile navigation, selectable accents and a motion switch. Real signup, Discord and existing detail pages are linked from configured sources; detail pages still use the current design. The prototype makes those boundaries visible in the review panel.
+The isolated `/playground/` route previews Home, Explore and Community as interactive views. It supports activity filters, member cards, mobile navigation, warm/dark surface selection and a motion switch. Real signup, Discord and existing detail pages are linked from configured sources; detail pages still use the current design. The prototype makes those boundaries visible in the review panel.
 
-The activity collection describes three formats, not future dated events. Display them as ways to get involved and point to the existing calendar as an archive. The current calendar only covers January-March 2026; do not invent new dates or active registration. Blog content is historical; do not imply its 2025 partnership announcement is a newly verified sponsorship.
+The user identifies the club as a Claude Builder Club collaborating with Claude. The concept reflects that current owner-provided identity. Historical blog content and the existing route content await the later content migration review. Activity entries describe three formats, not future dated events. The January-March 2026 calendar remains an archive; no new dates or registrations are invented.
 
 ## UX and accessibility
 
@@ -51,8 +51,8 @@ The activity collection describes three formats, not future dated events. Displa
 1. Review the overall direction and interactive template locally at desktop and mobile widths.
 2. Approve or revise the visual language, page hierarchy, hero and primary actions.
 3. Then create the detailed migration plan: route inventory, component mapping, content edits, calendar data schema, URL/SEO preservation, final image list, prompts and delivery order.
-4. Generate the approved final image set and optimize desktop/mobile formats.
-5. Roll out page families on feature branches, build and inspect each batch, and merge only after local review approval.
+4. Reuse the approved existing image set. Generate only imagery needed for a concrete gap; obtain partner logos from official sources. Optimize final desktop/mobile formats.
+5. Implement the production migration after approval, build and inspect each batch. The user has explicitly excluded these design explorations from PR preparation; this checkpoint is a local preview only.
 
 The detailed plan should resolve date/status/timezone/venue/registration fields in a shared root data file before replacing the hard-coded calendar. It should also identify outdated prose and committee deadlines for owner verification. These are discovered planning inputs, not content changes authorized for this concept.
 
@@ -60,11 +60,19 @@ The detailed plan should resolve date/status/timezone/venue/registration fields 
 
 - Next.js static build passes; existing production routes and redirect stubs remain available.
 - Screenshot inspection at 1440px and 375px; no horizontal scrolling or obstructed navigation.
-- View changes, filters, accent controls, pause control and mobile menu work.
+- View changes, filters, surface controls, pause control and mobile menu work.
 - Visible members follow the existing `promoted` visibility rule.
 - No invented event dates, numbers, sponsorship claims or project showcase entries.
-- Local preview stays running; branch PR stays open for design approval.
+- Local preview stays running. No new PR is prepared for design iterations; the earlier Draft PR #15 was closed.
 
 ## Review prompts
 
-Decide whether this should feel more experimental or more academic, whether the acid-green direction fits the club, and whether Home / Explore / Community makes the club easy to understand. Then evaluate the mobile layout, action prominence and readability. Approval of the direction precedes the detailed migration plan and production changes.
+Compare Warm paper and Charcoal within the fixed Claude palette. Decide how experimental or academic the composition should feel and whether Home / Explore / Community makes the club easy to understand. Then evaluate mobile layout, action prominence and readability. Approval of the direction precedes the detailed migration plan and production changes.
+
+## Owner approval and completed implementation
+
+The owner approved the overall direction on 6 October 2026 and authorized all-page migration, with redesigned activity icons, corrected team lead roles and committee recruitment. See [migration plan](migration-plan.md), [artwork](activity-artwork.md) and [verification](migration-qa.md). The full local site replaces the production-route templates; no new PR or deployment was prepared.
+
+## Final approved direction and publication
+
+On 7 October 2026 the owner confirmed the official name Cambridge AI Builder Club, an image-only header, the copyright footer and an ongoing Calendar page with session names. The owner reviewed these refinements locally and explicitly requested updating and merging PR #15. The historical prototype scope above is superseded by the completed migration described in migration-plan.md and migration-qa.md.

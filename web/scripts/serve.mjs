@@ -46,7 +46,15 @@ function resolveFile(urlPath) {
 }
 
 createServer((req, res) => {
-  const path = decodeURIComponent(new URL(req.url, 'http://x').pathname)
+  let path
+  try {
+    const requestUrl = (req.url ?? '/').replace(/^\/+/, '/')
+    path = decodeURIComponent(new URL(requestUrl, 'http://x').pathname)
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'text/plain' })
+    res.end('Invalid URL')
+    return
+  }
   const file = resolveFile(path)
   if (!file) {
     res.writeHead(404, { 'Content-Type': 'text/plain' })

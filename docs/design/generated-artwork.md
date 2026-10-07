@@ -1,5 +1,7 @@
 # Generated concept artwork
 
+Status: historical first experiment, superseded by the owner's Claude-branding and asset-reuse correction. The playground no longer references this image. No new generation was performed for the Claude edition; see [current asset sources](claude-brand-sources.md).
+
 - Asset: `images/design/builder-engine.jpg` (1536 x 1024).
 - Generated with the built-in GPT Image tool, 6 October 2026.
 - Purpose: decorative concept art for the isolated design playground hero.

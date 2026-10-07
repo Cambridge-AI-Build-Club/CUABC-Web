@@ -1,39 +1,15 @@
-// Port of _layouts/blog.html for each entry in _blogs/.
-import { PageMeta } from '@/components/PageMeta'
-import { Shell } from '@/components/Shell'
-import { Markdown } from '@/lib/markdown'
+import { ArticlePage } from '@/components/ArticlePage'
 import { loadCollection } from '@/lib/content'
+import { formatPublicationDate } from '@/lib/site'
 
-export function generateStaticParams() {
-  return loadCollection('_blogs').map((blog) => ({ slug: blog.slug }))
-}
+export function generateStaticParams() { return loadCollection('_blogs').map((entry) => ({ slug: entry.slug })) }
 
-export default async function BlogPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
+export default async function BlogPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const entry = loadCollection('_blogs').find((b) => b.slug === slug)
-  if (!entry) throw new Error(`Blog not found: ${slug}`)
-  const title = String(entry.title ?? slug)
-  return (
-    <>
-      <PageMeta title={title} path={`/blogs/${slug}/`} />
-      <Shell path={`/blogs/${slug}/`}>
-        <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
-          <div className="row justify-content-start">
-            <div className="col-12 col-md-8">
-              <div className="blog blog-single">
-                <h1 className="title">{title}</h1>
-                <div className="content">
-                  <Markdown>{entry.body}</Markdown>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Shell>
-    </>
-  )
+  const entry = loadCollection('_blogs').find((item) => item.slug === slug)
+  if (!entry) throw new Error(`Story not found: ${slug}`)
+  const heading = entry.body.match(/^\s*# ([^\n]+)\n/)
+  const title = heading ? heading[1].trim() : String(entry.title)
+  const body = heading ? entry.body.slice(heading[0].length) : entry.body
+  return <ArticlePage title={title} path={`/blogs/${slug}/`} eyebrow={`JOURNAL / ${formatPublicationDate(entry.date)}`} body={body} back={{ label: 'All stories', href: '/blogs/' }} />
 }

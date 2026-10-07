@@ -1,39 +1,18 @@
-// Port of _layouts/event.html for each entry in _events/.
-import { PageMeta } from '@/components/PageMeta'
-import { Shell } from '@/components/Shell'
-import { Markdown } from '@/lib/markdown'
-import { loadCollection } from '@/lib/content'
+import { ArticlePage } from '@/components/ArticlePage'
+import { Arrow } from '@/components/SiteSections'
+import { loadCollection, url } from '@/lib/content'
+import { loadActivities } from '@/lib/site'
 
-export function generateStaticParams() {
-  return loadCollection('_events').map((event) => ({ slug: event.slug }))
-}
+export function generateStaticParams() { return loadCollection('_events').map((entry) => ({ slug: entry.slug })) }
 
-export default async function EventPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
+export default async function EventPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const entry = loadCollection('_events').find((e) => e.slug === slug)
-  if (!entry) throw new Error(`Event not found: ${slug}`)
-  const title = String(entry.title ?? slug)
-  return (
-    <>
-      <PageMeta title={title} path={`/events/${slug}/`} />
-      <Shell path={`/events/${slug}/`}>
-        <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
-          <div className="row justify-content-start">
-            <div className="col-12 col-md-8">
-              <div className="event event-single">
-                <h1 className="title">{title}</h1>
-                <div className="content">
-                  <Markdown>{entry.body}</Markdown>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Shell>
-    </>
-  )
+  const entry = loadCollection('_events').find((item) => item.slug === slug)
+  if (!entry) throw new Error(`Activity not found: ${slug}`)
+  const title = String(entry.title)
+  const activity = loadActivities().find((item) => item.title === title)
+  return <ArticlePage title={title} path={`/events/${slug}/`} eyebrow="EXPLORE / ACTIVITY FORMAT" body={entry.body} back={{ label: 'All activities', href: '/events/' }}>
+    {activity?.image && <div className="site-detail-art"><img src={activity.image} width={240} height={160} alt="" /></div>}
+    <div className="site-note"><h2>Find your next session.</h2><p>Explore the club calendar and join the club to hear about new sessions.</p><a className="lab-text-link" href={url('/calendar/')}>View the calendar <Arrow /></a></div>
+  </ArticlePage>
 }
