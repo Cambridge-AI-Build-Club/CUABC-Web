@@ -4,15 +4,15 @@ date: 2025-09-07
 weight: 1
 ---
 
-# Building the Future: Cambridge AI Builders Club Partners with the Claude Builder Program  
+# Building the Future: Cambridge AI Builder Club Partners with the Claude Builder Program
 
-We are thrilled to announce that the **Cambridge AI Builders Club** is launching in *Michaelmas Term 2025–2026* with a groundbreaking collaboration: the official **Claude Builder Program**, supported by the team at **Anthropic**. This partnership marks the beginning of an exciting journey where Cambridge students can explore the power of AI not just as a tool, but as a creative partner in innovation.  
+We are thrilled to announce that the **Cambridge AI Builder Club** is launching in *Michaelmas Term 2025–2026* with a groundbreaking collaboration: the official **Claude Builder Program**, supported by the team at **Anthropic**. This partnership marks the beginning of an exciting journey where Cambridge students can explore the power of AI not just as a tool, but as a creative partner in innovation.
 
 ---
 
 ## Inspiring Builders at Cambridge  
 
-The Cambridge AI Builders Club was created to empower students to experiment with and build cutting-edge AI-driven projects.  
+The Cambridge AI Builder Club was created to empower students to experiment with and build cutting-edge AI-driven projects.
 Our mission is to provide a space where curiosity meets creativity—helping students learn, experiment, and share what’s possible with modern AI.  
 
 By hosting **demos, workshops, and hackathons**, we aim to make AI accessible to everyone, regardless of technical background.  
@@ -50,7 +50,7 @@ Whether you’re a beginner curious about AI or an experienced developer eager t
 
 ## Looking Ahead  
 
-Michaelmas Term is just the start. With Anthropic as our inaugural sponsor, the Cambridge AI Builders Club is laying the foundation for a community that will grow throughout the academic year.  
+Michaelmas Term is just the start. With Anthropic as our inaugural sponsor, the Cambridge AI Builder Club is laying the foundation for a community that will grow throughout the academic year.
 
 Our long-term vision is to:  
 - Continue building partnerships  

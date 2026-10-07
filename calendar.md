@@ -1,5 +1,5 @@
 ---
-title: Event Calendar
+title: Calendar
 layout: calendar
-description: Claude Builder Club Events Calendar - January to March 2026
+description: Demos, workshops and community events — all in one place.
 ---

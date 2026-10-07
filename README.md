@@ -1,6 +1,6 @@
-# Cambridge AI Builders Club   
+# Cambridge AI Builder Club
 
-Welcome to the official repository for the **Cambridge AI Builders Club** website.  
+Welcome to the official repository for the **Cambridge AI Builder Club** website.
 Our club is dedicated to empowering students at Cambridge to explore, learn, and innovate with artificial intelligence.  
 
 Through **workshops, hackathons, demos, and community events**, we provide hands-on opportunities for students of all backgrounds—whether you’re an experienced developer or completely new to AI.  
@@ -29,7 +29,7 @@ We’d love for you to join our community!
 
 ## Repository Info  
 
-This repo contains the source code for the Cambridge AI Builders Club website.  
+This repo contains the source code for the Cambridge AI Builder Club website.
 Contributions are welcome! If you’d like to improve the site or suggest new features, please open an issue or submit a pull request.  
 
 ---

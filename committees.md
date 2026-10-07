@@ -1,7 +1,14 @@
 ---
 title: Committees
 layout: page
-description: Committees
+description: Join the Cambridge AI Builder Club committee. Eight seats across outreach and technical tracks.
+recruitment_title: "Build the community, too."
+recruitment_summary: "We're recruiting for our outreach and technical committees. Help shape our sessions, projects and the year ahead."
+seats: 8
+tracks:
+  - Outreach
+  - Technical
+application_url: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=RQSlSfq9eUut41R7TzmG6ViLfiycMl5Phrl2grRDcjlUMklYVlRFVFJVMEY0WFAxOUpLTUtQM0I2SC4u"
 permalink: "/committees/"
 ---
 
@@ -9,7 +16,7 @@ Committee applications for 2026–27 are now open, and we are recruiting for **8
 
 ## Outreach track
 
-Open to students of any subject.
+Led by **Andrew Choi, Outreach Team Lead**. Open to students of any subject.
 
 - **Outreach Officer:** builds collaborations with other societies, raises our profile around Cambridge and runs member emails.
 - **Sponsorship Officer:** brings in funding for our events, especially the hackathon, by reaching out to companies and societies.
@@ -18,7 +25,7 @@ Open to students of any subject.
 
 ## Technical track
 
-You’ll need hands-on coding experience, but not a CS degree.
+Led by **Zihao Liu, Technical Team Lead**. You’ll need hands-on coding experience, but not a CS degree.
 
 - **Technical Officer (GitHub, Discord & Website):** owns the club’s technical infrastructure, including our website, GitHub repositories and Discord. You’ll maintain and improve these platforms, and build new tools or features where useful.
 - **Technical Officer (Workshop):** works with our Ambassadors, the student reps who help run our sessions, to design and deliver hands-on Claude / Claude Code workshops. You’ll help create technical content, demos and practical exercises for members.

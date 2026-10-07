@@ -1,40 +1,19 @@
-// Port of _layouts/team.html for each entry in _team/. Slugs keep their underscores
-// (e.g. /team/aditya_kalra/).
 import { PageMeta } from '@/components/PageMeta'
 import { Shell } from '@/components/Shell'
+import { Arrow, JoinSection, PageIntro, Recruitment } from '@/components/SiteSections'
 import { Markdown } from '@/lib/markdown'
-import { loadCollection } from '@/lib/content'
+import { loadCollection, url } from '@/lib/content'
 
-export function generateStaticParams() {
-  return loadCollection('_team').map((member) => ({ slug: member.slug }))
-}
+export function generateStaticParams() { return loadCollection('_team').map((entry) => ({ slug: entry.slug })) }
 
-export default async function TeamMemberPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
+export default async function TeamMemberPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const entry = loadCollection('_team').find((m) => m.slug === slug)
-  if (!entry) throw new Error(`Team member not found: ${slug}`)
-  const title = String(entry.title ?? slug)
-  return (
-    <>
-      <PageMeta title={title} path={`/team/${slug}/`} />
-      <Shell path={`/team/${slug}/`}>
-        <div className="container pb-6 pt-6 pt-md-10 pb-md-10">
-          <div className="row justify-content-start">
-            <div className="col-12 col-md-8">
-              <div className="team team-single">
-                <h1 className="title">{title}</h1>
-                <div className="content">
-                  <Markdown>{entry.body}</Markdown>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Shell>
-    </>
-  )
+  const entry = loadCollection('_team').find((item) => item.slug === slug)
+  if (!entry) throw new Error(`Member not found: ${slug}`)
+  const title = String(entry.title)
+  return <><PageMeta title={`${title} | Cambridge AI Builder Club`} path={`/team/${slug}/`} /><Shell path={`/team/${slug}/`}>
+    <PageIntro eyebrow="COMMUNITY / THE PEOPLE BEHIND THE CLUB" title={title} description={String(entry.jobtitle ?? '')} />
+    <div className="site-article-wrap"><a className="site-back" href={url('/team/')}>← Community</a><div className="site-profile">{entry.image ? <img src={url(String(entry.image))} alt={title} width={440} height={440} /> : null}<article className="site-prose"><Markdown>{entry.body}</Markdown>{entry.linkedinurl ? <a className="lab-text-link" href={String(entry.linkedinurl)} target="_blank" rel="noopener noreferrer">LinkedIn <Arrow /></a> : null}</article></div></div>
+    {entry.promoted !== false && <Recruitment />}<JoinSection />
+  </Shell></>
 }

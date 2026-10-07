@@ -21,6 +21,7 @@ export function PageMeta({
   return (
     <>
       <title>{title}</title>
+      <link rel="canonical" href={absoluteUrl(path)} />
       {description ? <meta name="description" content={description} /> : null}
       <meta property="og:title" content={metaTitle ?? title} />
       <meta property="og:type" content="website" />

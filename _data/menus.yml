@@ -1,25 +1,25 @@
 main:
-  - name: "Blogs"
-    url: "/blogs/"
-    weight: 2
-  - name: "Events"
+  - name: "Explore"
     url: "/events/"
-    weight: 3
+    weight: 1
   - name: "Calendar"
     url: "/calendar/"
-    weight: 4
-  - name: "Team"
+    weight: 2
+  - name: "Community"
     url: "/team/"
-    weight: 5
+    weight: 3
+  - name: "Journal"
+    url: "/blogs/"
+    weight: 4
   - name: "Committees"
     url: "/committees/"
-    weight: 6
+    weight: 5
   - name: "About"
     url: "/about/"
-    weight: 7
+    weight: 6
   - name: "Contact"
     url: "/contact/"
-    weight: 8
+    weight: 7
 
 footer:
   - name: "Home"

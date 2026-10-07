@@ -2,25 +2,25 @@
   {
     "title": "Demos",
     "image": {
-      "url": "images/features/noun_branding_1885335.svg",
-      "width": 80,
-      "height": 80
+      "url": "images/features/demo.svg",
+      "width": 240,
+      "height": 160
     }
   },
   {
     "title": "Workshops",
     "image": {
-      "url": "images/features/noun_The Process_1885341.svg",
-      "width": 80,
-      "height": 80
+      "url": "images/features/workshop.svg",
+      "width": 240,
+      "height": 160
     }
   },
   {
     "title": "Hackathon",
     "image": {
-      "url": "images/features/noun_3d modeling_1885342.svg",
-      "width": 80,
-      "height": 80
+      "url": "images/features/hackathon.svg",
+      "width": 240,
+      "height": 160
     }
   }
 ]

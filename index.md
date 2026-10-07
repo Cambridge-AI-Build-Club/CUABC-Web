@@ -6,8 +6,14 @@ intro_image: "images/illustrations/ai-builder.png"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
 sign_up: true
+headline:
+  - "Stay curious."
+  - "Build with Claude."
+eyebrow: "Cambridge AI Builder Club"
+welcome_title: "Bring your curiosity."
+welcome_copy: "You don't need a finished idea or a computer science degree. Come to learn, experiment, and build alongside others."
+join_title: "Your next idea starts here."
+join_copy: "Find collaborators, try something new, and see what you can build together."
 ---
 
-# Cambridge AI Builder Club
-
-The CUABC is a student-led community that empowers students to explore and build with cutting-edge AI technologies. We inspire innovation through workshops, hackathons, and collaborative events with leading AI organisations.
+A student-led community, in collaboration with Claude. Explore ideas, build real projects, and find your people.
