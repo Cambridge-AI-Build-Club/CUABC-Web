@@ -1,6 +1,6 @@
 # Cambridge AI Builder Club design rules
 
-Last updated: 7 October 2026. Applies to all production Next.js routes and the design playground.
+Last updated: 9 October 2026. Applies to all production Next.js routes and the design playground.
 
 ## Maintain this document first
 
@@ -67,7 +67,7 @@ For a fix that preserves the rules, add a change record explaining the regressio
 - Join, Discord and application actions use their real configured URLs. External tabs use `rel="noopener noreferrer"`. Keep visible action labels explicit about their purpose.
 - A whole activity/member/story card is one clear link. Avoid nested links/buttons, duplicate tab stops and decorative elements that intercept clicks.
 - Mobile navigation opens from a labeled toggle, exposes its expanded state, closes on Escape and navigation, and returns focus to the toggle on Escape. It must not cover or block controls when closed.
-- Filters show the current selection, retain context and offer an understandable empty state. Do not make filtering dependent on hover.
+- Filters show the current selection with a filled surface and text emphasis, retain context and offer an understandable empty state. Keep hover and keyboard feedback visible in both themes. Do not make filtering dependent on hover.
 - Preserve standard browser Back behavior, link destinations and anchor navigation. Do not hijack scrolling, add autoplay video or make interactions depend on a pointer.
 
 ## Content and page behavior
@@ -81,6 +81,7 @@ For a fix that preserves the rules, add a change record explaining the regressio
 - Do not add a summary row above the calendar grid: omit total/month session counts and the redundant `Club Calendar` badge. Retain month navigation, session names, details and the session list.
 - Calendar cells show session names, with explicit cancelled labels. Selecting a day/session updates the matching detail panel. Month navigation keeps selected details in the visible month and disables unavailable boundaries.
 - On narrow screens, the calendar dates region may scroll horizontally with a visible hint; the document itself must not overflow. Keep names readable instead of hiding them or replacing them with counts. The region must be keyboard reachable.
+- Keep the Welcome section About link available at desktop, intermediate and mobile widths; place it below the copy when space is limited.
 - Reading pages use one primary heading, a comfortable prose width and useful return links. Preserve existing routes, canonical metadata, sitemap/robots and legacy redirect stubs.
 
 ## Accessibility and responsive acceptance
@@ -118,3 +119,11 @@ Read `AGENTS.md` for branch, build, preview and publication requirements. Keep t
 
 - Owner requested `PR and merge` after reviewing the local preview and final caption/calendar/community edits. This authorizes publication of the contract, animated icon migration and those copy changes together.
 - Local build and preview checks passed before approval. Create a PR to `main`, wait for its build/design checks, squash-merge and verify the Pages deployment. Remote checks and deployment are pending at the time of this record; report their actual result in the PR and publication receipt.
+
+### 9 October 2026 — refine copy and small usability details
+
+- Request: initiate text improvements and minor UI improvements.
+- Surfaces: Home, About, Contact, activity listing/detail pages, shared Welcome section, filters and footer; align the playground where shared copy or styles change.
+- Implementation intent: clearer signup labels; concise, concrete, welcoming prose in existing content sources; useful activity-format context without adding dates or promises. Restore the Welcome About link on narrow screens, add filter text emphasis and footer hover/focus feedback. Preserve the approved palette, headings, images, icons, routes, recruitment facts and calendar data.
+- Acceptance: design policy and static export build; card summaries at most 100 characters; fresh screenshots at 1440px and 375px in both themes plus intermediate Welcome layout; filters, menu, theme persistence, keyboard focus, image loading and calendar smoke check; no document overflow or browser/hydration errors; targeted accessibility scan. Keep the local preview on port 4102 for owner review.
+- Status: implemented and verified locally. Design guard and static build passed (24 pages, 20 legacy redirects). Desktop/mobile screenshots in both themes, intermediate Welcome layout, keyboard/mobile controls, reduced motion, calendar smoke check and overflow/image/error checks passed. Eight targeted accessibility scans found zero violations; one decorative-label contrast result was reviewed manually at 5.20:1. See [verification and screenshots](docs/design/copy-ui-qa.md). Local Node 24; supported Node 20 Linux CI tracked in [PR #18](https://github.com/Cambridge-AI-Build-Club/Cambridge-AI-Build-Club.github.io/pull/18). Preview kept on port 4102; awaiting owner review, not published.

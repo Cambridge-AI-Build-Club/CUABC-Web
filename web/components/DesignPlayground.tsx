@@ -161,7 +161,7 @@ export function DesignPlayground({ data }: { data: PlaygroundData }) {
                 <h1 ref={mainHeading} tabIndex={-1}>{data.copy.headline[0]}<br /><span className="accent">{data.copy.headline[1]}</span></h1>
                 <p className="lab-intro">{data.copy.intro}</p>
                 <div className="lab-hero-actions">
-                  <a className="lab-button" href={data.signup} target="_blank" rel="noopener noreferrer">Find your people <Arrow /></a>
+                  <a className="lab-button" href={data.signup} target="_blank" rel="noopener noreferrer">Join the club <Arrow /></a>
                   <button className="lab-text-link" onClick={() => showView('explore')}>See what we do <Arrow /></button>
                 </div>
                 <p className="lab-hero-note">Curiosity is the only prerequisite.</p>

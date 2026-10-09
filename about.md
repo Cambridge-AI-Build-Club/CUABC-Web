@@ -1,13 +1,14 @@
 ---
 title: About
 layout: page
-description: About
+description: A student-led Cambridge community where people from every subject can learn, build and share AI projects.
 bodyClass: page-about
 ---
-The **Cambridge AI Builder Club** is a student-led community dedicated to exploring the creative and practical possibilities of artificial intelligence.
 
-Our mission is to empower students from all backgrounds to experiment with AI, build innovative projects, and share their work with the wider community. Whether you’re a seasoned developer or completely new to AI, we provide the tools, events, and support to help you get started and grow.
+The **Cambridge AI Builder Club** brings students together to explore what they can make with artificial intelligence. We are student-led and work in collaboration with Claude.
 
-Through **workshops, hackathons, demos, and community events**, we create opportunities for hands-on learning, collaboration, and showcasing ideas. In collaboration with Claude, we connect Cambridge students with practical AI tools and a community of builders.
+You can start with a question, an unfinished idea or a project already in progress. Students from every subject and level of experience are welcome.
 
-At the heart of our club is a simple belief: **AI should be a platform for creativity, collaboration, and innovation.**
+Our **workshops** offer hands-on practice, **hackathons** make space to build in a team, and **demos** give builders a chance to share their work. Across these formats, the aim is simple: try ideas, learn from one another and make something you can show.
+
+Explore our [activities](/events/) to find a format that interests you, or check the [calendar](/calendar/) for session details.
