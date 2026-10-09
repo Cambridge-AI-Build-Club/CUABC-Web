@@ -6,6 +6,8 @@ Read `DESIGN.md` before any UI/UX, layout, icon, motion, navigation or visual-as
 ## Workflow
 **All changes go through a branch + pull request.** Never push directly to `main`: create a dedicated branch for every piece of work (code, content, or documentation), open a pull request into `main`, let the build check pass, and merge (squash). All recorded work — commit messages, PR titles and descriptions, documentation, and code comments — is written in **English**. Local design exploration is exempt from PR preparation when the user requests that workflow; publishing still follows the branch/review process.
 
+**Branch names follow the Conventional Branch convention** — the Conventional Commits type list applied to branches, as `<type>/<kebab-case-summary>` in lowercase, short, naming the *kind of change*: `feature/` (or `feat/`) new capability, `fix/` bug fix, `hotfix/` urgent production fix, `docs/` documentation only, `style/` formatting that does not change meaning, `refactor/` behavior-preserving restructuring, `perf/` performance, `test/` tests only, `build/` build system or dependencies, `ci/` workflow and deploy pipeline, `chore/` maintenance with no source effect, `revert/` undoing a merged change. Add the issue number when there is one (`fix/123-hero-cta-width`). **Never use an AI tool or agent as the prefix** — no `codex/`, `claude/`, `copilot/` or `gemini/` branches, and no personal-name branches; a branch records what changed, not who or what produced it.
+
 **Preview before merge.** After finishing work on a branch, build it and start a local server so the site can be reviewed before merging:
 
 ```bash
