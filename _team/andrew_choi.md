@@ -1,7 +1,7 @@
 ---
 title: "Andrew Choi"
 date: 2025-09-07
-image: "images/team/andrew_choi.png"
+image: "images/team/andrew_choi.jpg"
 jobtitle: "Outreach Team Lead"
 linkedinurl: "https://www.linkedin.com/in/jaehyung-andrew-choi/"
 promoted: true

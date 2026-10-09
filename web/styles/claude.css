@@ -108,7 +108,7 @@
 .lab-archive p:not(.lab-kicker) { font-size: 14px; line-height: 1.75; color: var(--muted); max-width: 570px; margin-top: 16px; }
 .lab-members { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 870px; }
 .lab-member { border: 1px solid var(--line); background: var(--panel); }
-.lab-member > img { width: 100%; height: 300px; display: block; object-fit: cover; object-position: center 25%; }
+.lab-member > img { width: 100%; height: auto; aspect-ratio: 1 / 1; display: block; object-fit: cover; }
 .lab-member > div { padding: 20px 24px; }
 .lab-member h3 { margin-top: 0; }
 .lab-member p { font-size: 12px; color: var(--muted); margin-top: 14px; line-height: 1.7; }
@@ -199,6 +199,5 @@
   .lab-archive h2 { font-size: 27px; }
   .lab-archive .lab-kicker { font-size: 9px; }
   .lab-members { grid-template-columns: 1fr; width: 100%; }
-  .lab-member > img { height: 320px; }
   .lab-controls { width: calc(100% - 32px); right: 16px; top: 56px; padding: 18px; max-height: calc(100dvh - 72px); }
 }
