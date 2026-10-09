@@ -6,8 +6,8 @@ Goal: improve club copy and small usability details while preserving the approve
 - [x] Update DESIGN.md before implementation.
 - [x] Refine Home, About, Contact and activity copy; restore mobile About link and improve control feedback.
 - [x] Build; inspect desktop/mobile in both themes; check interactions and accessibility.
-- [ ] Commit, open PR and verify the build check; keep local preview available.
+- [x] Commit and open PR #18; keep local preview available. Build status is tracked by the PR check.
 - [ ] Owner preview approval, then squash merge and production verification (not authorized yet).
 
 ## Next Step
-Commit the reviewed change and open the PR. Owner preview approval is required before merge.
+Owner reviews http://localhost:4102/ and approves PR #18 before merge. Confirm its current build check, squash merge and verify deployment only after that approval.
