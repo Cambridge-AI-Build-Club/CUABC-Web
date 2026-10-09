@@ -1,17 +1,9 @@
 ---
 title: Contact
 layout: contact
-description: Contact
+description: Ask about the club, propose a project demo or get in touch about committee applications.
 ---
 
-Have a question about the club, our events, or how to get involved?  
-We’d love to hear from you!  
+Have a question about the club or an idea to share? Get in touch to ask about events, propose a project demo or find out how to get involved.
 
-Whether you’d like to:  
-- Apply for a committee position  
-- Build and showcase your own demo  
-- Or simply learn more about what we do  
-
-…please reach out and we’ll be happy to help.
-
-For committee and recruitment questions, email Andrew Choi at [jc2409@cam.ac.uk](mailto:jc2409@cam.ac.uk) or Zihao Liu at [zl600@cam.ac.uk](mailto:zl600@cam.ac.uk).  
+For committee and recruitment questions, email Andrew Choi at [jc2409@cam.ac.uk](mailto:jc2409@cam.ac.uk) or Zihao Liu at [zl600@cam.ac.uk](mailto:zl600@cam.ac.uk).

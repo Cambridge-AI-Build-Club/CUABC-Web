@@ -18,7 +18,7 @@ export default function HomePage() {
           <p className="lab-kicker"><span className="lab-status-dot" />{copy.eyebrow}</p>
           <h1>{copy.headline[0]}<br /><span className="accent">{copy.headline[1]}</span></h1>
           <p className="lab-intro">{copy.intro}</p>
-          <div className="lab-hero-actions"><a className="lab-button" href={site.signup} target="_blank" rel="noopener noreferrer">Find your people <Arrow /></a><a className="lab-text-link" href={url('/events/')}>See what we do <Arrow /></a></div>
+          <div className="lab-hero-actions"><a className="lab-button" href={site.signup} target="_blank" rel="noopener noreferrer">Join the club <Arrow /></a><a className="lab-text-link" href={url('/events/')}>See what we do <Arrow /></a></div>
           <p className="lab-hero-note">Curiosity is the only prerequisite.</p>
         </div>
         <div className="lab-hero-visual"><img src={url(String(page.intro_image))} alt="" width={1080} height={1080} fetchPriority="high" /><div className="lab-art-tag">CAMBRIDGE / BUILDERS AT WORK</div><span className="lab-art-index" aria-hidden="true">CAMBRIDGE, UK</span></div>
