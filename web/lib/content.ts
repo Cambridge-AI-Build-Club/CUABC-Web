@@ -72,6 +72,25 @@ export function loadMenus(): { main: MenuItem[]; footer: MenuItem[] } {
   return parseYaml(readRepoFile('_data/menus.yml'))
 }
 
+export interface ProjectEntry {
+  slug: string
+  title: string
+  label: string
+  description: string
+  image: string
+  image_alt: string
+  image_width: number
+  image_height: number
+  live_url: string
+  source_url: string
+  action_label: string
+  features: { title: string; description: string }[]
+}
+
+export function loadProjects(): ProjectEntry[] {
+  return parseYaml(readRepoFile('_data/projects.yml'))
+}
+
 export function loadSignup(): { form: string } {
   return parseYaml(readRepoFile('_data/signup.yml'))
 }

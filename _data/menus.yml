@@ -1,25 +1,28 @@
 main:
-  - name: "Explore"
-    url: "/events/"
-    weight: 1
-  - name: "Calendar"
-    url: "/calendar/"
-    weight: 2
-  - name: "Community"
-    url: "/team/"
-    weight: 3
-  - name: "Journal"
-    url: "/blogs/"
-    weight: 4
-  - name: "Committees"
-    url: "/committees/"
-    weight: 5
   - name: "About"
     url: "/about/"
+    weight: 1
+  - name: "Explore"
+    url: "/events/"
+    weight: 2
+  - name: "Projects"
+    url: "/projects/"
+    weight: 3
+  - name: "Calendar"
+    url: "/calendar/"
+    weight: 4
+  - name: "Community"
+    url: "/team/"
+    weight: 5
+  - name: "Journal"
+    url: "/blogs/"
     weight: 6
+  - name: "Committees"
+    url: "/committees/"
+    weight: 7
   - name: "Contact"
     url: "/contact/"
-    weight: 7
+    weight: 8
 
 footer:
   - name: "Home"

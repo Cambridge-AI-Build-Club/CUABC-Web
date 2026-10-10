@@ -1,0 +1,21 @@
+- slug: cbc-world
+  title: "CBC World — Claude Ambassadors Map"
+  label: "INTERACTIVE MAP / BUILT BY THE CLUB"
+  description: >-
+    CBC World is an interactive map built by Cambridge AI Builder Club to help
+    people find Claude Ambassadors around the world. Explore universities on the
+    globe, search for a campus and connect with the ambassadors there.
+  image: "/images/projects/cbc-world.jpg"
+  image_alt: "CBC World showing the Claude Ambassadors directory beside an interactive globe of university locations."
+  image_width: 1280
+  image_height: 720
+  live_url: "https://cambridge-ai-build-club.github.io/CBC-World/"
+  source_url: "https://github.com/Cambridge-AI-Build-Club/CBC-World"
+  action_label: "Explore CBC World"
+  features:
+    - title: "Explore the globe"
+      description: "Rotate and zoom to discover universities and their ambassador communities."
+    - title: "Find a campus"
+      description: "Search by university, city or ambassador name in the directory."
+    - title: "Make a connection"
+      description: "Open a university to find its ambassadors and their public contact links."
