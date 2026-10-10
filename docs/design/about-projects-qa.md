@@ -6,7 +6,7 @@ The shared header now includes About and Projects, with the menu at widths of 11
 
 ## Checks performed
 
-- `npm run build` passed with the design policy, TypeScript checks, 25 exported routes and 21 legacy redirect stubs. Local Node: 24.19.0; the PR workflow separately checks Node 20 on Linux.
+- `npm run build` passed with the design policy, TypeScript checks, 25 exported routes and 21 legacy redirect stubs. Local Node: 24.19.0. The implementation commit `b64d70c` also passed the [Node 20 Linux PR build](https://github.com/Cambridge-AI-Build-Club/Cambridge-AI-Build-Club.github.io/actions/runs/38069028222) in 46 seconds.
 - Fresh full-page screenshots inspected for About and Projects at 1440px and 375px in Warm Paper and Charcoal. Additional intermediate/breakpoint checks at 903px, 1100px and 1101px. Navigation clears the logo and appearance control immediately above the menu breakpoint.
 - No horizontal document overflow or broken images in the checked views. Screenshot renders at its original 1280x720 ratio in both pages and themes. The delivered image is byte-identical to the source capture, 83,376 bytes; its loading and bytes were verified through the local server.
 - Header destinations, active-page state, About footer link and project live/source/internal links checked. Project external actions use `noopener noreferrer`; no iframe or WebGL app is loaded on the club pages.
