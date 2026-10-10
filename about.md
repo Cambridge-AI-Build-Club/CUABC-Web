@@ -3,6 +3,7 @@ title: About
 layout: page
 description: A student-led Cambridge community where people from every subject can learn, build and share AI projects.
 bodyClass: page-about
+project_heading: "CBC World: connecting builders"
 ---
 
 The **Cambridge AI Builder Club** brings students together to explore what they can make with artificial intelligence. We are student-led and work in collaboration with Claude.

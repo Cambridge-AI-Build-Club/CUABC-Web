@@ -1,0 +1,1589 @@
+{
+  "checks": [
+    {
+      "label": "Projects desktop paper",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 120.5,
+        "right": 286.5,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 84.5,
+        "right": 1340.5,
+        "width": 1256
+      },
+      "menuDisplay": "none",
+      "nav": {
+        "height": 46,
+        "left": 626.140625,
+        "right": 1236.5,
+        "width": 610.359375
+      },
+      "navDisplay": "flex",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 666.875,
+          "left": 121.5,
+          "right": 1303.5,
+          "width": 1182
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 1260.5,
+        "right": 1304.5,
+        "width": 44
+      },
+      "width": 1440
+    },
+    {
+      "label": "Projects desktop charcoal",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 120.5,
+        "right": 286.5,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 84.5,
+        "right": 1340.5,
+        "width": 1256
+      },
+      "menuDisplay": "none",
+      "nav": {
+        "height": 46,
+        "left": 626.140625,
+        "right": 1236.5,
+        "width": 610.359375
+      },
+      "navDisplay": "flex",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 666.875,
+          "left": 121.5,
+          "right": 1303.5,
+          "width": 1182
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 1260.5,
+        "right": 1304.5,
+        "width": 44
+      },
+      "width": 1440
+    },
+    {
+      "label": "About desktop charcoal",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "http://localhost:4102/projects/",
+          "rel": "",
+          "target": "",
+          "text": "See our projects"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 120.5,
+        "right": 286.5,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/about/",
+      "current": [
+        "About"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 84.5,
+        "right": 1340.5,
+        "width": 1256
+      },
+      "menuDisplay": "none",
+      "nav": {
+        "height": 46,
+        "left": 626.140625,
+        "right": 1236.5,
+        "width": 610.359375
+      },
+      "navDisplay": "flex",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 417.125,
+          "left": 121.5,
+          "right": 859.5,
+          "width": 738
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 1260.5,
+        "right": 1304.5,
+        "width": 44
+      },
+      "width": 1440
+    },
+    {
+      "label": "About desktop paper",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "http://localhost:4102/projects/",
+          "rel": "",
+          "target": "",
+          "text": "See our projects"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 120.5,
+        "right": 286.5,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/about/",
+      "current": [
+        "About"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 84.5,
+        "right": 1340.5,
+        "width": 1256
+      },
+      "menuDisplay": "none",
+      "nav": {
+        "height": 46,
+        "left": 626.140625,
+        "right": 1236.5,
+        "width": 610.359375
+      },
+      "navDisplay": "flex",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 417.125,
+          "left": 121.5,
+          "right": 859.5,
+          "width": 738
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 1260.5,
+        "right": 1304.5,
+        "width": 44
+      },
+      "width": 1440
+    },
+    {
+      "label": "About mobile paper",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "http://localhost:4102/projects/",
+          "rel": "",
+          "target": "",
+          "text": "See our projects"
+        }
+      ],
+      "brand": {
+        "height": 48,
+        "left": 20,
+        "right": 68,
+        "width": 48
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/about/",
+      "current": [
+        "About"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 85,
+        "left": 0,
+        "right": 360,
+        "width": 360
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 180.875,
+          "left": 21,
+          "right": 339,
+          "width": 318
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 211.96875,
+        "right": 255.96875,
+        "width": 44
+      },
+      "width": 375
+    },
+    {
+      "label": "Keyboard Escape",
+      "expanded": "false",
+      "focused": "Menu",
+      "navDisplay": "none",
+      "outline": "solid"
+    },
+    {
+      "label": "About mobile charcoal",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "http://localhost:4102/projects/",
+          "rel": "",
+          "target": "",
+          "text": "See our projects"
+        }
+      ],
+      "brand": {
+        "height": 48,
+        "left": 20,
+        "right": 68,
+        "width": 48
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/about/",
+      "current": [
+        "About"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 85,
+        "left": 0,
+        "right": 360,
+        "width": 360
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 180.875,
+          "left": 21,
+          "right": 339,
+          "width": 318
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 211.96875,
+        "right": 255.96875,
+        "width": 44
+      },
+      "width": 375
+    },
+    {
+      "label": "Projects mobile charcoal after menu navigation",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 48,
+        "left": 20,
+        "right": 68,
+        "width": 48
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 85,
+        "left": 0,
+        "right": 360,
+        "width": 360
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 180.875,
+          "left": 21,
+          "right": 339,
+          "width": 318
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 211.96875,
+        "right": 255.96875,
+        "width": 44
+      },
+      "width": 375
+    },
+    {
+      "label": "Projects mobile paper",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 48,
+        "left": 20,
+        "right": 68,
+        "width": 48
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 85,
+        "left": 0,
+        "right": 360,
+        "width": 360
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 180.875,
+          "left": 21,
+          "right": 339,
+          "width": 318
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 211.96875,
+        "right": 255.96875,
+        "width": 44
+      },
+      "width": 375
+    },
+    {
+      "label": "Projects mobile paper after reload",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 48,
+        "left": 20,
+        "right": 68,
+        "width": 48
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 85,
+        "left": 0,
+        "right": 360,
+        "width": 360
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 180.875,
+          "left": 21,
+          "right": 339,
+          "width": 318
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 211.96875,
+        "right": 255.96875,
+        "width": 44
+      },
+      "width": 375
+    },
+    {
+      "label": "Projects paper width 903",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 36,
+        "right": 202,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 0,
+        "right": 888,
+        "width": 888
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 459.875,
+          "left": 37,
+          "right": 851,
+          "width": 814
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 723.96875,
+        "right": 767.96875,
+        "width": 44
+      },
+      "width": 903
+    },
+    {
+      "label": "Projects paper width 1100",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 36,
+        "right": 202,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 0,
+        "right": 1085,
+        "width": 1085
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 570.6875,
+          "left": 37,
+          "right": 1048,
+          "width": 1011
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 920.96875,
+        "right": 964.96875,
+        "width": 44
+      },
+      "width": 1100
+    },
+    {
+      "label": "Projects paper width 1101",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "https://github.com/Cambridge-AI-Build-Club/CBC-World",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "View source"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 36,
+        "right": 202,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/projects/",
+      "current": [
+        "Projects"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 0,
+        "right": 1086,
+        "width": 1086
+      },
+      "menuDisplay": "none",
+      "nav": {
+        "height": 46,
+        "left": 371.640625,
+        "right": 982,
+        "width": 610.359375
+      },
+      "navDisplay": "flex",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 571.25,
+          "left": 37,
+          "right": 1049,
+          "width": 1012
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "paper",
+      "theme": {
+        "height": 44,
+        "left": 1006,
+        "right": 1050,
+        "width": 44
+      },
+      "width": 1101
+    },
+    {
+      "label": "About desktop charcoal after reload",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "http://localhost:4102/projects/",
+          "rel": "",
+          "target": "",
+          "text": "See our projects"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 120.5,
+        "right": 286.5,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/about/",
+      "current": [
+        "About"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 84.5,
+        "right": 1340.5,
+        "width": 1256
+      },
+      "menuDisplay": "none",
+      "nav": {
+        "height": 46,
+        "left": 626.140625,
+        "right": 1236.5,
+        "width": 610.359375
+      },
+      "navDisplay": "flex",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 417.125,
+          "left": 121.5,
+          "right": 859.5,
+          "width": 738
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 1260.5,
+        "right": 1304.5,
+        "width": 44
+      },
+      "width": 1440
+    },
+    {
+      "label": "About intermediate charcoal",
+      "actions": [
+        {
+          "href": "https://cambridge-ai-build-club.github.io/CBC-World/",
+          "rel": "noopener noreferrer",
+          "target": "_blank",
+          "text": "Explore CBC World"
+        },
+        {
+          "href": "http://localhost:4102/projects/",
+          "rel": "",
+          "target": "",
+          "text": "See our projects"
+        }
+      ],
+      "brand": {
+        "height": 84,
+        "left": 36,
+        "right": 202,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/about/",
+      "current": [
+        "About"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 0,
+        "right": 888,
+        "width": 888
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": {
+        "attributes": [
+          "1280",
+          "720"
+        ],
+        "box": {
+          "height": 417.125,
+          "left": 37,
+          "right": 775,
+          "width": 738
+        },
+        "natural": [
+          1280,
+          720
+        ]
+      },
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 723.96875,
+        "right": 767.96875,
+        "width": 44
+      },
+      "width": 903
+    },
+    {
+      "label": "Project action keyboard focus",
+      "activeText": "Explore CBC World",
+      "icon": "arrow-right",
+      "outline": "solid"
+    },
+    {
+      "label": "Reduced motion and icons",
+      "icons": true,
+      "reducedMotion": true,
+      "transition": "0s"
+    },
+    {
+      "label": "Calendar intermediate smoke check",
+      "actions": [],
+      "brand": {
+        "height": 84,
+        "left": 36,
+        "right": 202,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/calendar/",
+      "current": [
+        "Calendar"
+      ],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 0,
+        "right": 888,
+        "width": 888
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": null,
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 723.96875,
+        "right": 767.96875,
+        "width": 44
+      },
+      "width": 903
+    },
+    {
+      "label": "Calendar session selection",
+      "heading": "Build your first MCP apps",
+      "selected": "Saturday, 14 March 2026 — Build your first MCP apps"
+    },
+    {
+      "label": "Homepage intermediate smoke check",
+      "actions": [],
+      "brand": {
+        "height": 84,
+        "left": 36,
+        "right": 202,
+        "width": 166
+      },
+      "brokenImages": [],
+      "canonical": "https://cambridge-ai-build-club.github.io/",
+      "current": [],
+      "h1": 1,
+      "header": {
+        "height": 121,
+        "left": 0,
+        "right": 888,
+        "width": 888
+      },
+      "menuDisplay": "flex",
+      "nav": {
+        "height": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0
+      },
+      "navDisplay": "none",
+      "navigation": [
+        {
+          "href": "/about/",
+          "name": "About"
+        },
+        {
+          "href": "/events/",
+          "name": "Explore"
+        },
+        {
+          "href": "/projects/",
+          "name": "Projects"
+        },
+        {
+          "href": "/calendar/",
+          "name": "Calendar"
+        },
+        {
+          "href": "/team/",
+          "name": "Community"
+        },
+        {
+          "href": "/blogs/",
+          "name": "Journal"
+        },
+        {
+          "href": "https://www.jotform.com/253555944387168",
+          "name": "Join the club"
+        }
+      ],
+      "overflow": false,
+      "screenshot": null,
+      "surface": "charcoal",
+      "theme": {
+        "height": 44,
+        "left": 723.96875,
+        "right": 767.96875,
+        "width": 44
+      },
+      "width": 903
+    }
+  ],
+  "accessibility": [
+    {
+      "label": "Projects desktop paper",
+      "incomplete": [],
+      "passes": 23,
+      "violations": []
+    },
+    {
+      "label": "Projects desktop charcoal",
+      "incomplete": [],
+      "passes": 23,
+      "violations": []
+    },
+    {
+      "label": "About desktop paper",
+      "incomplete": [],
+      "passes": 22,
+      "violations": []
+    },
+    {
+      "label": "About mobile paper",
+      "incomplete": [],
+      "passes": 22,
+      "violations": []
+    },
+    {
+      "label": "About mobile charcoal",
+      "incomplete": [],
+      "passes": 22,
+      "violations": []
+    },
+    {
+      "label": "Projects mobile charcoal",
+      "incomplete": [],
+      "passes": 23,
+      "violations": []
+    },
+    {
+      "label": "Projects mobile paper",
+      "incomplete": [],
+      "passes": 23,
+      "violations": []
+    },
+    {
+      "label": "About desktop charcoal",
+      "incomplete": [],
+      "passes": 22,
+      "violations": []
+    }
+  ],
+  "logs": []
+}

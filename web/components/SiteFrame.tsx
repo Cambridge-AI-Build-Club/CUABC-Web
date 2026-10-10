@@ -57,7 +57,7 @@ export function SiteFrame({ data, path, children }: { data: SiteData; path: stri
         </div>
         <nav id="site-navigation" className={menuOpen ? 'is-open' : ''} aria-label="Main navigation">
           {data.navigation.map((item) => (
-            <a key={item.href} href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>{item.name}</a>
+            <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)} aria-current={path.startsWith(item.href) ? 'page' : undefined}>{item.name}</a>
           ))}
           <a className="lab-button lab-button-small" href={data.signup} target="_blank" rel="noopener noreferrer">Join the club <Arrow /></a>
         </nav>

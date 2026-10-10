@@ -1,0 +1,104 @@
+{
+  "pages": [
+    {
+      "route": "http://localhost:4102/about/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/blogs/claude-builder-program/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/blogs/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/calendar/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/committees/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/contact/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/events/demo/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/events/hackathon/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/events/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/events/workshop/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/projects/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/team/aditya_kalra/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/team/andrew_choi/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/team/hanzhang_shen/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/team/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/team/lauren_kwon/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/team/saakshi_bhat/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "route": "http://localhost:4102/team/zihao_liu/",
+      "status": 200,
+      "h1": 1
+    }
+  ],
+  "project_asset_bytes": 83376,
+  "project_asset_sha256": "de3dd4f3ae738489ab3e2fc65be87cd4ad30326846ef84166dfbc6c9843c8ec0",
+  "original_about_body_preserved": true,
+  "sitemap_and_redirects": true,
+  "static_project_preview": true
+}

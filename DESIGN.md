@@ -1,6 +1,6 @@
 # Cambridge AI Builder Club design rules
 
-Last updated: 9 October 2026. Applies to all production Next.js routes and the design playground.
+Last updated: 10 October 2026. Applies to all production Next.js routes and the design playground.
 
 ## Maintain this document first
 
@@ -64,7 +64,7 @@ For a fix that preserves the rules, add a change record explaining the regressio
 
 ## Navigation and interactions
 
-- Main navigation is Explore, Calendar, Community and Journal, with a persistent Join action. Preserve the existing destination URLs and active-page indication.
+- Main navigation is About, Explore, Projects, Calendar, Community and Journal, with a persistent Join action. Keep About in the footer as well. Preserve the existing destination URLs and active-page indication. Production navigation uses the existing menu pattern at 1100px and below so the expanded set of destinations never collides with the logo or appearance control.
 - Logo navigation returns home. Internal destinations go through `url()`; canonical URLs use `absoluteUrl()`.
 - Join, Discord and application actions use their real configured URLs. External tabs use `rel="noopener noreferrer"`. Keep visible action labels explicit about their purpose.
 - A whole activity/member/story card is one clear link. Avoid nested links/buttons, duplicate tab stops and decorative elements that intercept clicks.
@@ -75,6 +75,9 @@ For a fix that preserves the rules, add a change record explaining the regressio
 ## Content and page behavior
 
 - Root Markdown, `_data/` and the existing collections are the single content source. Do not duplicate biographies, activity descriptions, application links or calendar data in components.
+- Project records live once in `_data/projects.yml`; root `projects.md` supplies the page introduction. About and Projects share the same project preview and build-time data. Show real built projects with a screenshot, useful description and explicit live/source actions; omit placeholder projects and filters until needed.
+- CBC World is an international Claude ambassador map built by the club. Describe its globe, university search and ambassador connections; do not represent its global map totals as club membership. Use `https://cambridge-ai-build-club.github.io/CBC-World/` for permanent links: the approved research verified that `?v=2` serves the same app.
+- Project screenshots are documentary captures: retain their original proportions, content and branding in both themes. The approved CBC World overview was captured from the live app on 10 October 2026 and is delivered at `images/projects/cbc-world.jpg`; use a descriptive image alt and a separate labeled action to launch the interactive app. Do not load the WebGL app in an About or Projects iframe.
 - Andrew is Outreach Team Lead and Zihao is Technical Team Lead. Preserve the collection's visibility and sorting rules; do not invent titles or member records.
 - Committee recruitment remains visible from Home and Community. Preserve the configured application process and factual seat/track information; verify changes rather than inventing availability or deadlines.
 - Activity pages describe formats. Publication dates are not event dates. Avoid presenting past records as future sessions.
@@ -152,3 +155,12 @@ Read `AGENTS.md` for branch, build, preview and publication requirements. Keep t
 - The owner reviewed the local preview on port 4102 and requested the merge. Both commits squash-merged into `main` as [PR #21](https://github.com/Cambridge-AI-Build-Club/Cambridge-AI-Build-Club.github.io/pull/21) at `c937e45`; the branch CI `build` check passed and the `Deploy Next.js site to Pages` run completed successfully on the merge commit.
 - Verified against the live site at the org root with a cache-busting query string, because Pages caches for up to ten minutes: `/team/` references `/images/team/andrew_choi.jpg` and `/images/team/zihao_liu.jpg`, both served at HTTP 200 with the expected 119,854B and 76,733B payloads; the shipped CSS carries `aspect-ratio:1/1` on `.lab-member>img` and `.site-profile>img` with the fixed-height mobile overrides gone; and the stale `/images/team/zihao_liu.png` now returns 404, which confirms the corrected reference rather than a surviving copy.
 - Open items carried forward: the compact non-promoted card still needs a compaction decision before any member renders in it, and the uncropped 2424px camera original is retained outside the repository should the crop need revisiting.
+
+### 10 October 2026 — add About and Projects to the header and showcase CBC World
+
+- Request: owner approved the researched plan for header About/Projects, a CBC World introduction on About and a Projects showcase with the captured live screenshot.
+- Surfaces: shared production header/mobile menu, About, new Projects route, navigation data, sitemap and generated legacy redirects.
+- Implementation intent: main destinations ordered About, Explore, Projects, Calendar, Community and Journal; keep Join and appearance controls, and switch to the menu at 1100px. Reuse a single root project record and server-rendered preview in compact About and full Projects contexts. Preserve the club introduction and existing Join sections. Retain the approved palette, typography, Morphicons and documentary screenshot proportions.
+- Asset provenance: live CBC World overview captured on 10 October 2026 from `https://cambridge-ai-build-club.github.io/CBC-World/`; original retained in the external research folder `about-projects-research/cbc-world-plain-desktop.jpg`. No generated project imagery. Both supplied URLs were verified to return byte-identical HTML and the same app assets; permanent links use the app's plain canonical URL.
+- Acceptance: design policy and static export; 1440px/375px and intermediate breakpoint review in both themes; navigation/current-page indication, keyboard focus, Escape and menu dismissal, theme persistence, screenshot loading/proportions and live/source destinations; one h1, metadata/sitemap/legacy redirects; no document overflow, broken images or browser errors; targeted accessibility scan and existing shared-route/calendar smoke check. Keep preview on port 4102 for owner review.
+- Status: implemented and verified locally. Design guard and static build passed (25 exported routes, 21 legacy redirects); original About body preserved. Fresh 1440px/375px screenshots in both themes and 903px/1100px/1101px layout checks passed; no document overflow or broken images. Keyboard/menu/theme/reduced-motion and Home/Calendar smoke checks passed; eight targeted accessibility scans found zero violations or incomplete findings. Nineteen production HTML routes, project asset bytes/proportions, canonical/sitemap and legacy redirect passed; browser logs contained no errors or warnings. See [verification and screenshots](docs/design/about-projects-qa.md). Preview kept on port 4102. Local Node 24; Node 20 Linux PR CI pending. Awaiting owner preview review; not published.

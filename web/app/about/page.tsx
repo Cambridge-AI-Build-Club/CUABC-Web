@@ -1,7 +1,11 @@
 import { ArticlePage } from '@/components/ArticlePage'
-import { loadPage } from '@/lib/content'
+import { ProjectPreview } from '@/components/ProjectPreview'
+import { loadPage, loadProjects } from '@/lib/content'
 
 export default function AboutPage() {
   const page = loadPage('about.md')
-  return <ArticlePage title="Curious minds. Real possibilities." path="/about/" eyebrow="ABOUT / CAMBRIDGE AI BUILDER CLUB" body={page.body} />
+  const project = loadProjects().find((entry) => entry.slug === 'cbc-world')
+  return <ArticlePage title="Curious minds. Real possibilities." description={String(page.description)} path="/about/" eyebrow="ABOUT / CAMBRIDGE AI BUILDER CLUB" body={page.body}>
+    {project && <ProjectPreview project={project} compact heading={String(page.project_heading)} />}
+  </ArticlePage>
 }

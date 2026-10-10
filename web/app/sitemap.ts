@@ -3,7 +3,7 @@ import { absoluteUrl, loadCollection } from '@/lib/content'
 
 export const dynamic = 'force-static'
 
-const staticPages = ['/', '/about/', '/contact/', '/events/', '/blogs/', '/team/', '/committees/', '/calendar/']
+const staticPages = ['/', '/about/', '/projects/', '/contact/', '/events/', '/blogs/', '/team/', '/committees/', '/calendar/']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const collectionPages = [

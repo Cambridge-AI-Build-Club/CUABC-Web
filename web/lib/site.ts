@@ -26,7 +26,7 @@ export function loadSiteData() {
     discord: loadDiscord().discord,
     email: loadContact().email ?? '',
     navigation: loadMenus().main
-      .filter((item) => ['/events/', '/calendar/', '/team/', '/blogs/'].includes(item.url))
+      .filter((item) => ['/about/', '/events/', '/projects/', '/calendar/', '/team/', '/blogs/'].includes(item.url))
       .sort((a, b) => a.weight - b.weight)
       .map((item) => ({ name: item.name, href: url(item.url) })),
     links: {
